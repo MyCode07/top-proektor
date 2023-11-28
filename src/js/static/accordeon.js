@@ -17,7 +17,7 @@ function toggleAccordion(item) {
     }
 }
 
-export const accorden = () => {
+export const accordeon = () => {
     if (!accordions.length) return
 
     accordions.forEach(accordion => {

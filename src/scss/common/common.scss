@@ -127,6 +127,14 @@ h3 {
             }
         }
     }
+
+    &-dark {
+        color: $black;
+
+        svg {
+            transform: rotate(0deg);
+        }
+    }
 }
 
 ._btn-social {
@@ -181,9 +189,26 @@ h3 {
     }
 }
 
+._btn-dark-hover {
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba(000, 000, 000, 0.1);
+        }
+    }
+}
+
 ._desctop-show {
     @media (max-width: 768px) {
         display: none;
+    }
+}
+
+._mobile-show {
+    display: none;
+    @media (max-width: 768px) {
+        display: block;
     }
 }
 
