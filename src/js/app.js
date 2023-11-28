@@ -1,8 +1,8 @@
 // import { accorden } from "./static/accordeon.js"; 
 // import { maskInputs } from "./static/inputmask.js";
-// import { replaceDomElements } from "./static/replace.js";
+import { replaceDomElements } from "./static/replace.js";
 
-// import "./parts/sliders.js";
+import "./parts/sliders.js";
 // import "./parts/popup.js";
 // import "./parts/menu.js";
 // import "./parts/read-more.js";
@@ -13,7 +13,7 @@
 // import { animateAction } from "./parts/animations.js";
 
 // stickyHeader()
-// replaceDomElements();
+replaceDomElements();
 // accorden();
 // scrollDown();
 // animateAction()

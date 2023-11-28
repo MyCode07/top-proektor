@@ -1,11 +1,21 @@
-$container: 1280;
-$padding: 30;
+$container: 1360;
+$padding: 40;
 $containerWithPadding: $container + ($padding * 2);
-$black: #0a0b0f;
-$accent: #1c54c7;
-$accent-hover: #16439f;
+$main: #212023;
+$text: #cccccc;
+$dark-text: #292626;
+$light-text: #b3b3b3;
+$orange: #ff6201;
+$black: #000000;
+$black-30: rgba(
+    $color: #000000,
+    $alpha: 0.3
+);
 $white: #fff;
-$gray: #e6e7e7;
-$light-gray: #fafafa;
-$orange: #f0381f;
-$dark-grey: #1b1c1e;
+$white-30: rgba(
+    $color: #fff,
+    $alpha: 0.3
+);
+$dark-grey: #3d3d3d;
+$light-grey: #f4f1e8;
+$svg: #767470;

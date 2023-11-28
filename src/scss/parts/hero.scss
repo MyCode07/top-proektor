@@ -1,0 +1,122 @@
+.hero {
+    @include adaptive-value("padding-top", 178, 102, 1);
+    @include adaptive-value("padding-bottom", 222, 253, 1);
+
+    position: relative;
+
+    background-image: url("@img/hero-bgi.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+
+    @media (min-width: 768px) {
+        margin-bottom: -40px;
+    }
+
+    @media (max-width: 425px) {
+        background-image: url("@img/hero-bgi-mobile.png");
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        @include adaptive-value("height", 137, 340, 1);
+        background: linear-gradient(0deg, #212023 0%, rgba(33, 32, 35, 0) 100%);
+
+        @media (max-width: 425px) {
+            display: none;
+        }
+    }
+
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__body
+
+    &__body {
+        position: relative;
+
+        h1 {
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+        }
+
+        ol {
+            margin-bottom: 37px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            li {
+                padding: 6px 14.5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 48px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+
+                color: $white;
+                font-size: 16px;
+            }
+        }
+
+        p {
+            margin: 26px 0 40px 0;
+            color: $light-text;
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: -0.6px;
+
+            @media (max-width: 1024px) {
+                max-width: 60%;
+                width: 100%;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        button {
+            width: 297px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    ._person {
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+
+        @include adaptive-value("bottom", -55, 0, 1);
+        @include adaptive-value("width", 124, 100, 1);
+        @include adaptive-value("height", 124, 100, 1);
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        svg {
+            position: absolute;
+            top: 8.4px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 17.4px;
+            height: 17.4px;
+            flex: 0 0 auto;
+        }
+    }
+}

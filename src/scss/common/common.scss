@@ -5,13 +5,12 @@ html {
 body {
     scroll-behavior: smooth;
     font-style: normal;
-    line-height: 1.4;
-    font-size: 17px;
-
-    font-family: "CeraPro";
-
-    color: $white;
-    background-color: $black;
+    color: $dark-text;
+    font-family: TTHoves;
+    font-size: 16px;
+    background-color: $main;
+    font-style: normal;
+    font-weight: 400;
 
     &._noscroll {
         overflow: hidden;
@@ -48,7 +47,7 @@ main {
     }
 
     @media (max-width: 1024px) {
-        padding-inline: 16px;
+        padding-inline: 15px;
     }
 }
 
@@ -58,4 +57,185 @@ svg {
     display: block;
     width: 100%;
     max-width: 100%;
+}
+
+h1 {
+    position: relative;
+    z-index: 2;
+    color: $white;
+    font-weight: 500;
+    @include adaptive-value("font-size", 82, 41, 1);
+    @include adaptive-value(" letter-spacing", -2.46, -1.23, 1);
+
+    @media (max-width: 768px) {
+        color: $light-grey;
+    }
+}
+
+h2 {
+    color: #020101;
+    font-weight: 500;
+    @include adaptive-value("font-size", 62, 32, 1);
+    @include adaptive-value(" letter-spacing", -1.86, -0.96, 1);
+}
+
+h3 {
+    color: #020101;
+    font-weight: 500;
+    @include adaptive-value("font-size", 32, 24, 1);
+    @include adaptive-value(" letter-spacing", -0.96, -0.72, 1);
+}
+
+._btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.54px;
+    border-radius: 4px;
+    border: 1px solid #666;
+
+    transition: all 0.3s ease 0s;
+
+    svg {
+        width: 14px;
+        height: 6px;
+        transform: rotate(90deg);
+        margin-left: 11px;
+    }
+
+    @media (max-width: 768px) {
+        font-weight: 500;
+    }
+
+    &-orange {
+        background-color: $orange;
+        border: none;
+
+        svg {
+            fill: $white;
+            stroke: $white;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #ff711a;
+            }
+        }
+    }
+}
+
+._btn-social {
+    border: 1px solid $white-30;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        fill: $white;
+        flex: 0 0 auto;
+    }
+}
+
+._btn_tg {
+    svg {
+        width: 17px !important;
+        height: 14px !important;
+    }
+}
+
+._hover {
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &-white {
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+._btn-hover {
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+
+            svg {
+                fill: $orange;
+            }
+        }
+    }
+}
+
+._desctop-show {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.slider-control {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    button {
+        width: 56px;
+        height: 56px;
+        border: 1px solid $white-30;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.prev {
+    svg {
+        transform: rotate(180deg);
+    }
+}
+.next {
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin-top: 16px;
+
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #666;
+        width: 8px;
+        height: 8px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.3s ease 0s;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $orange;
+        }
+    }
 }
