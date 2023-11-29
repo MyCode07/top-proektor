@@ -4,7 +4,7 @@ import { replaceDomElements } from "./static/replace.js";
 
 import "./parts/sliders.js";
 // import "./parts/popup.js";
-// import "./parts/menu.js";
+import "./parts/menu.js"; 
 // import "./parts/read-more.js";
 // import "./parts/filters.js";
 

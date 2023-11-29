@@ -2,7 +2,7 @@ import { isMobile } from '../utils/isMobile.js';
 import { lockPadding, unLockPadding } from '../utils/lockPadding.js';
 
 const body = document.body;
-const menu = document.querySelector('.header__bottom nav');
+const menu = document.querySelector('.menu');
 const burger = document.querySelector('.header__burger');
 const menuLinks = document.querySelectorAll('.menu li a');
 const header = document.querySelector('.header');
@@ -36,17 +36,22 @@ if (menuLinks.length) {
 
             menu.classList.toggle('_open');
             burger.classList.toggle('_active');
-
             body.classList.toggle('_noscroll');
         })
     })
 }
 
 
-const arrow = `<button><svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
-<path d="M4.92922 5.33709L8.82427 1.79221C8.93758 1.6871 9 1.54677 9 1.39715C9 1.24753 8.93758 1.10721 8.82427 1.00209L8.46387 0.667391C8.22902 0.4496 7.84733 0.4496 7.61285 0.667391L4.50228 3.48384L1.38715 0.663156C1.27384 0.558038 1.1228 0.5 0.961732 0.5C0.800489 0.5 0.649442 0.558038 0.536044 0.663156L0.17573 0.997855C0.0624217 1.10306 -3.24905e-08 1.24329 -3.90307e-08 1.39292C-4.55708e-08 1.54254 0.0624217 1.68286 0.17573 1.78798L4.07525 5.33709C4.18892 5.44246 4.34068 5.50033 4.50201 5.5C4.66397 5.50033 4.81564 5.44246 4.92922 5.33709Z" fill="white"/>
-</svg></button>
-`;
+const arrow = `<button><svg width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3L0 0H6L3 3Z" />
+                </svg></button>`;
+
+const mbMenuArrow = `<button class="menu-arrow"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-0.5" y="0.5" width="55" height="55" rx="27.5" transform="matrix(-1 0 0 1 55 0)" stroke="white" stroke-opacity="0.4"/>
+<path d="M25.5 28L27.5 25L20 28L27.5 31L25.5 28Z" fill="white"/>
+<path d="M34 28H25" stroke="white"/>
+</svg>
+</button>`;
 
 const submenuList = document.querySelectorAll('nav ul li');
 if (submenuList.length) {
@@ -58,8 +63,17 @@ if (submenuList.length) {
             link.insertAdjacentHTML('afterend', arrow);
             const btn = li.querySelector('button');
 
+            if (link.closest('.menu')) link.insertAdjacentHTML('beforebegin', mbMenuArrow);
+
             if (btn && isMobile.any()) {
                 btn.addEventListener('click', function () {
+                    toggleMenu(li)
+                })
+            }
+
+            const btnArrow = li.querySelector('.menu-arrow');
+            if (btnArrow && isMobile.any()) {
+                btnArrow.addEventListener('click', function () {
                     toggleMenu(li)
                 })
             }

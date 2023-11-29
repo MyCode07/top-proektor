@@ -2,7 +2,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 5;
+    z-index: 17;
     width: 100%;
 
     padding-top: 25px;
@@ -25,48 +25,6 @@
         display: flex;
         align-items: center;
         width: 100%;
-    }
-
-    nav {
-        margin-right: auto;
-
-        @media (max-width: 1024px) {
-            display: none;
-        }
-
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include adaptive-value("gap", 41, -21, 1);
-
-            li {
-                @media (any-hover: hover) {
-                    &:hover {
-                        svg {
-                            transform: rotate(-180deg);
-                        }
-                    }
-                }
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    white-space: nowrap;
-                }
-
-                svg {
-                    margin-left: 8px;
-                    width: 6px;
-                    height: 3px;
-                    flex: 0 0 auto;
-                    fill: $white;
-                    transition: all 0.3s ease 0s;
-                }
-            }
-        }
     }
 
     // .header__left
@@ -120,7 +78,6 @@
     &__right {
         @media (min-width: 1025px) {
             display: flex;
-            align-items: center;
             width: 100%;
         }
     }
@@ -175,6 +132,10 @@
     &__phone {
         @include adaptive-value("margin-left", 26, -10, 1);
         @include adaptive-value("margin-right", 64, -50, 1);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         @media (max-width: 1024px) {
             display: none;
@@ -268,6 +229,175 @@
             &:hover {
                 background-color: rgba($color: #666, $alpha: 0.1);
             }
+        }
+    }
+
+    nav {
+        margin-right: auto;
+
+        @media (min-width: 1025px) {
+            & > ul {
+                display: flex;
+                justify-content: center;
+                min-height: 100%;
+
+                @include adaptive-value("gap", 41, -21, 1);
+
+                & > li {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    min-height: 100%;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            & > button svg {
+                                transform: rotate(-180deg);
+                            }
+
+                            & > ul {
+                                opacity: 1;
+                                pointer-events: all;
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    &[data-open] {
+                        & > button svg {
+                            transform: rotate(-180deg);
+                        }
+
+                        & > ul {
+                            opacity: 1;
+                            pointer-events: all;
+                            visibility: visible;
+                        }
+                    }
+
+                    a {
+                        white-space: nowrap;
+                    }
+
+                    button {
+                        flex: 0 0 auto;
+                        margin-left: 8px;
+                    }
+
+                    svg {
+                        width: 6px;
+                        height: 3px;
+                        flex: 0 0 auto;
+                        fill: $white;
+                        transition: all 0.3s ease 0s;
+                    }
+
+                    & > ul {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: #020202;
+                        padding: 35px 0 27px 0;
+                        width: 317px;
+                        opacity: 0;
+                        pointer-events: none;
+                        visibility: hidden;
+
+                        transition: all 0.3s ease 0s;
+
+                        li {
+                            transition: color 0.3s ease 0s;
+                            display: flex;
+                            align-items: center;
+                            padding: 0 29px;
+
+                            &:not(.menu-title) {
+                                color: $light-text;
+
+                                &:not(:last-child) {
+                                    margin-bottom: 16px;
+                                }
+
+                                @media (any-hover: hover) {
+                                    &:hover {
+                                        color: $white;
+                                    }
+                                }
+                            }
+
+                            @media (any-hover: hover) {
+                                &:hover {
+                                    ul {
+                                        transform: translate3d(0, 0, 0);
+                                        opacity: 1;
+                                        visibility: visible;
+                                        pointer-events: all;
+                                    }
+                                }
+                            }
+
+                            &[data-open] {
+                                ul {
+                                    transform: translate3d(0, 0, 0);
+                                    opacity: 1;
+                                    visibility: visible;
+                                    pointer-events: all;
+                                }
+                            }
+
+                            svg {
+                                transform: rotate(-90deg);
+                                fill: currentColor;
+                            }
+
+                            ul {
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                min-height: 100%;
+                                background-color: #0d0d0d;
+                                padding: 35px 0 27px 0;
+                                width: 317px;
+
+                                transform: translate3d(-50px, 0, 0);
+                                opacity: 0;
+                                visibility: hidden;
+                                pointer-events: none;
+                                transition: all 0.3s ease 0s;
+
+                                &:not(:last-child) {
+                                    margin-bottom: 16px;
+                                }
+
+                                @media (any-hover: hover) {
+                                    &:hover {
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .menu-title {
+                        &:not(:last-child) {
+                            margin-bottom: 24px;
+                        }
+
+                        &:last-child {
+                            margin-top: 24px;
+                        }
+
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 1;
+                        letter-spacing: -0.03em;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
         }
     }
 }
