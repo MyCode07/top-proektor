@@ -11,10 +11,10 @@ import "./parts/sliders.js";
 import "./static/ticker.js";
 
 // import { scrollDown } from "./parts/scroll-down.js";
-// import { stickyHeader } from "./parts/header.js";
+import { stickyHeader } from "./parts/header.js";
 // import { animateAction } from "./parts/animations.js";
 
-// stickyHeader()
+stickyHeader()
 replaceDomElements();
 accordeon();
 
