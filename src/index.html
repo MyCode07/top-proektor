@@ -5,8 +5,14 @@
 @@include('./html/header.html')
 
 <main>
-
-    <section class="hero _mb home-hero">
+    <section class="hero home-hero">
+        <div class="hero__image">
+            <picture>
+                <source srcset="img/hero-bgi.png" media="(min-width:769px)">
+                <source srcset="img/hero-bgi-mobile.png" media="(max-width:768px)">
+                <img et="img/hero-bgi-mobile.png" alt="">
+            </picture>
+        </div>
         <div class="hero__container _container">
             <div class="hero__body">
                 <ol>
@@ -18,7 +24,6 @@
                     поверхности</h1>
                 <p>Уменьшает стоимость привлечения нового клиента каждый день</p>
                 <button class="_btn _btn-orange">Рассчитать</button>
-
                 <button class="_person">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="9.3001" cy="9.0999" r="8.7" fill="black" fill-opacity="0.6" />
@@ -43,47 +48,42 @@
         </div>
     </section>
 
-    <section class="section where">
+    <section class="section area">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="section__top">
                     <h2>Где применяется</h2>
                 </div>
                 <div class="section__row">
-                    <div class="section__row-item">
-                        <div class="where-card" data-replace-width="1024">
-                            <div class="where-card__content" data-replace-old-position="beforeend">
-                                <div class="where-card__title">
-                                    <h3 data-replace-new-position="afterend">Световая <br>
-                                        разметка</h3>
-                                    <a href="">В каталог
-                                        <svg width="14" height="6" viewBox="0 0 14 6"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M8.16667 3.5H0V2.5H8.16667L6.5 0L14 3L6.5 6L8.16667 3.5Z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <ol class="where-card__list" data-replace-element>
-                                    <li>Дорожная разметка </li>
-                                    <li>Дорожные знаки</li>
-                                    <li>Подсветка башенного крана</li>
-                                    <li>Проекционный пешеходный переход</li>
-                                    <li>Разметка опасных зон</li>
-                                    <li>Световая демаркация и навигация</li>
-                                </ol>
+                    <div class="area-card">
+                        <div class="area-card__content">
+                            <div class="area-card__title">
+                                <h3>Световая <br>
+                                    разметка</h3>
+                                <a href="">В каталог
+                                    <svg width="14" height="6" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M8.16667 3.5H0V2.5H8.16667L6.5 0L14 3L6.5 6L8.16667 3.5Z" />
+                                    </svg>
+                                </a>
                             </div>
-                            <a href="" class="where-card__img">
-                                <img src="img/where/where-1.png" alt="">
-                            </a>
+                            <ol class="area-card__list">
+                                <li>Дорожная разметка </li>
+                                <li>Дорожные знаки</li>
+                                <li>Подсветка башенного крана</li>
+                                <li>Проекционный пешеходный переход</li>
+                                <li>Разметка опасных зон</li>
+                                <li>Световая демаркация и навигация</li>
+                            </ol>
                         </div>
+                        <a href="" class="area-card__img">
+                            <img src="img/area/area-1.png" alt="">
+                        </a>
                     </div>
-                </div>
-                <div class="section__row-item">
-                    <div class="where-card" data-replace-width="1024">
-                        <div class="where-card__content" data-replace-old-position="beforeend">
-                            <div class="where-card__title">
-                                <h3 data-replace-new-position="afterend">Проекционная <br>
+                    <div class="area-card">
+                        <div class="area-card__content">
+                            <div class="area-card__title">
+                                <h3>Проекционная <br>
                                     реклама</h3>
                                 <a href="">В каталог
                                     <svg width="14" height="6" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
@@ -92,51 +92,48 @@
                                     </svg>
                                 </a>
                             </div>
-                            <ol class="where-card__list" data-replace-element>
+                            <ol class="area-card__list">
                                 <li>Реклама на асфальте</li>
                                 <li>Реклама на стенах</li>
                                 <li>Реклама на фасадах</li>
                             </ol>
                         </div>
 
-                        <a href="" class="where-card__img">
-                            <img src="img/where/where-2.png" alt="">
+                        <a href="" class="area-card__img">
+                            <img src="img/area/area-2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-card__content">
+                            <div class="area-card__title">
+                                <h3>Декоративная <br>
+                                    проекция</h3>
+                                <a href="">В каталог
+                                    <svg width="14" height="6" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M8.16667 3.5H0V2.5H8.16667L6.5 0L14 3L6.5 6L8.16667 3.5Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <ol class="area-card__list">
+                                <li>Для ивент агентств</li>
+                                <li>Для концертов</li>
+                                <li>Для праздников</li>
+                                <li>Для мероприятий</li>
+                            </ol>
+                        </div>
+                        <a href="" class="area-card__img">
+                            <img src="img/area/area-3.png" alt="">
                         </a>
                     </div>
                 </div>
+                <button class="_btn _btn-orange">
+                    Смотреть все
+                    <svg viewBox="0 0 14 6">
+                        <use xlink:href="img/svg/icons.svg#catalog-arrow" />
+                    </svg>
+                </button>
             </div>
-            <div class="section__row-item">
-                <div class="where-card" data-replace-width="1024">
-                    <div class="where-card__content" data-replace-old-position="beforeend">
-                        <div class="where-card__title">
-                            <h3 data-replace-new-position="afterend">Декоративная <br>
-                                проекция</h3>
-                            <a href="">В каталог
-                                <svg width="14" height="6" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M8.16667 3.5H0V2.5H8.16667L6.5 0L14 3L6.5 6L8.16667 3.5Z" />
-                                </svg>
-                            </a>
-                        </div>
-                        <ol class="where-card__list" data-replace-element>
-                            <li>Для ивент агентств</li>
-                            <li>Для концертов</li>
-                            <li>Для праздников</li>
-                            <li>Для мероприятий</li>
-                        </ol>
-                    </div>
-                    <a href="" class="where-card__img">
-                        <img src="img/where/where-3.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <button class="_btn _btn-orange">Смотреть все
-            <svg viewBox="0 0 14 6">
-                <use xlink:href="@img/svg/icons.svg#catalog-arrow" />
-            </svg></button>
-        </div>
         </div>
     </section>
 
@@ -146,10 +143,10 @@
                 <div class="section__top">
                     <h2>Как выбрать гобо-проектор</h2>
                 </div>
-                <div class="section__flex">
-                    <div class="section__flex-item">
-                        <div class="how__item">
-                            <div class="how__item-top">
+                <div class="grid grid-4">
+                    <div class="grid-item">
+                        <div class="how-card">
+                            <div class="how-card__top">
                                 <svg viewBox="0 0 78 61">
                                     <use xlink:href="@img/svg/icons.svg#how-1" />
                                 </svg>
@@ -157,7 +154,7 @@
                                     <use xlink:href="@img/svg/icons.svg#how-arrow" />
                                 </svg>
                             </div>
-                            <div class="how__item-bottom">
+                            <div class="how-card__bottom">
                                 <span>1. Расстояние
                                     и место установки</span>
                                 <p>Выберите расстояние и место установки, где будет установлен проектор. Гобо-проектор
@@ -166,9 +163,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section__flex-item">
-                        <div class="how__item">
-                            <div class="how__item-top">
+                    <div class="grid-item">
+                        <div class="how-card">
+                            <div class="how-card__top">
                                 <svg viewBox="0 0 78 78">
                                     <use xlink:href="@img/svg/icons.svg#how-2" />
                                 </svg>
@@ -176,7 +173,7 @@
                                     <use xlink:href="@img/svg/icons.svg#how-arrow" />
                                 </svg>
                             </div>
-                            <div class="how__item-bottom">
+                            <div class="how-card__bottom">
                                 <span>2. Выбор проектора</span>
                                 <p>Выбор мощности рекламного проектора зависит от степени освещённости места установки.
                                     Просто пришлите фото места нам в
@@ -185,9 +182,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section__flex-item">
-                        <div class="how__item">
-                            <div class="how__item-top">
+                    <div class="grid-item">
+                        <div class="how-card">
+                            <div class="how-card__top">
                                 <svg viewBox="0 0 68 79">
                                     <use xlink:href="@img/svg/icons.svg#how-3" />
                                 </svg>
@@ -195,7 +192,7 @@
                                     <use xlink:href="@img/svg/icons.svg#how-arrow" />
                                 </svg>
                             </div>
-                            <div class="how__item-bottom">
+                            <div class="how-card__bottom">
                                 <span>3. Расчет</span>
                                 <p>Мы рекомендуем вам 1-2 модели, вы выбираете и оплачиваете счёт.
                                 </p>
@@ -203,14 +200,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section__flex-item">
-                        <div class="how__item">
-                            <div class="how__item-top">
+                    <div class="grid-item">
+                        <div class="how-card">
+                            <div class="how-card__top">
                                 <svg viewBox="0 0 78 55">
                                     <use xlink:href="@img/svg/icons.svg#how-4" />
                                 </svg>
                             </div>
-                            <div class="how__item-bottom">
+                            <div class="how-card__bottom">
                                 <span>4. Монтаж</span>
                                 <p>Сообщите нам адрес доставки, ФИО и номер получателя вашего заказа. Заказ будет
                                     доставлен по России до ПВЗ СДЭК в вашем
@@ -227,13 +224,11 @@
     <section class="section consulting">
         <div class="section__container _container">
             <div class="section__body">
-                <div class="section__top">
-                    <h2>Консультация, замер, <br>
-                        расчет бесплатно</h2>
-                </div>
-
                 <div class="section__flex">
                     <div class="section__flex-left">
+                        <h2>Консультация, замер, <br>
+                            расчет бесплатно</h2>
+
                         <div class="person">
                             <div class="person__img">
                                 <img src="img/person.png" alt="">
@@ -247,11 +242,11 @@
                     <div class="section__flex-right">
                         <form class="form" action="#">
                             <div class="form__row">
-                                <div data-required class="form__item">
+                                <div class="form__item">
                                     <span>Ваше имя</span>
                                     <input type="text" name="name" value="" placeholder="">
                                 </div>
-                                <div data-required class="form__item">
+                                <div class="form__item">
                                     <span>Ваш телефон</span>
                                     <input type="text" name="name" value="" placeholder="">
                                 </div>
@@ -270,12 +265,11 @@
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    @@include('./html/example.html', {
+    @@include('./html/parts/example.html', {
     "class":"",
     "text":"Какой может <br> быть ваша реклама?",
     })
@@ -312,9 +306,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="section__content swiper">
-                    <div class="section__flex swiper-wrapper">
-                        <div class="section__flex-item swiper-slide">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                             <div class="review-card">
                                 <label>Кулечек</label>
                                 <img class="review-card__rating" src="img/icons/review-stars.svg" alt="">
@@ -328,7 +322,7 @@
                                 <p><span>Недостатки:</span> Нету</p>
                             </div>
                         </div>
-                        <div class="section__flex-item swiper-slide">
+                        <div class="swiper-slide">
                             <div class="review-card">
                                 <label>Кулечек</label>
                                 <img class="review-card__rating" src="img/icons/review-stars.svg" alt="">
@@ -342,7 +336,7 @@
                                 <p><span>Недостатки:</span> Нету</p>
                             </div>
                         </div>
-                        <div class="section__flex-item swiper-slide">
+                        <div class="swiper-slide">
                             <div class="review-card">
                                 <label>Кулечек</label>
                                 <img class="review-card__rating" src="img/icons/review-stars.svg" alt="">
@@ -357,7 +351,7 @@
                                 <p><span>Недостатки:</span> Нету</p>
                             </div>
                         </div>
-                        <div class="section__flex-item swiper-slide">
+                        <div class="swiper-slide">
                             <div class="review-card">
                                 <label>Кулечек</label>
                                 <img class="review-card__rating" src="img/icons/review-stars.svg" alt="">
@@ -374,7 +368,7 @@
                                 <p><span>Недостатки:</span> Нету</p>
                             </div>
                         </div>
-                        <div class="section__flex-item swiper-slide">
+                        <div class="swiper-slide">
                             <div class="review-card">
                                 <label>Кулечек</label>
                                 <img class="review-card__rating" src="img/icons/review-stars.svg" alt="">
@@ -388,13 +382,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="pagination">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="pagination">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -455,24 +448,24 @@
                     <h2>Гобо-слайды</h2>
                 </div>
                 <div class="section__content">
-                    <div class="grid  grid-2">
+                    <div class="grid  grid-4">
                         <div class="grid__item">
-                            <a href="">
+                            <a href="" class="gobo-card">
                                 <img src="img/gobo/gobo-1.png" alt="">
                             </a>
                         </div>
                         <div class="grid__item">
-                            <a href="">
+                            <a href="" class="gobo-card">
                                 <img src="img/gobo/gobo-2.png" alt="">
                             </a>
                         </div>
                         <div class="grid__item">
-                            <a href="">
+                            <a href="" class="gobo-card">
                                 <img src="img/gobo/gobo-3.png" alt="">
                             </a>
                         </div>
                         <div class="grid__item">
-                            <a href="">
+                            <a href="" class="gobo-card">
                                 <img src="img/gobo/gobo-4.png" alt="">
                             </a>
                         </div>
@@ -493,73 +486,74 @@
             <div class="section__body">
                 <div class="section__top">
                     <h2>Каталог проекторов</h2>
+                    <h2>Вопросы по этому блоку</h2>
                 </div>
                 <div class="section__content">
                     <div class="grid grid-3">
                         <div class="grid__item" data-replace-width="768">
-                            <article class="projector__card">
-                                <div class="projector__card-img">
+                            <article class="projector-card">
+                                <div class="projector-card__img">
                                     <a href="" data-replace-new-position="beforebegin">
                                         <img src="img/projectors/projector-1.png" alt="">
                                     </a>
                                 </div>
-                                <div class="projector__card-info">
-                                    <a href="" class="projector__card-name _hover"><span
-                                            class="_desctop-show">Светодиодный</span>
+                                <div class="projector-card__info">
+                                    <a href="" class="projector-card__name _hover">
+                                        <span class="_desctop-show">Светодиодный</span>
                                         <br>
                                         ГОБО IGP S200 PLUS
                                     </a>
-                                    <ol class="projector__card-characteristic" data-replace-old-position="afterbegin">
+                                    <ol class="projector-card__characteristic" data-replace-old-position="afterbegin">
                                         <li class="_replache" data-replace-element>Мощность 50 Вт</li>
                                         <li class="_mobile-show">Один слайд. Статичная проекция.</li>
                                         <li class="_mobile-show">Рек. расстояние до 3,5 метров.</li>
                                     </ol>
-                                    <p class="projector__card-price"><span></span> 22 000 ₽<del>26 000 ₽</del></p>
+                                    <p class="projector-card__price"><span></span> 22 000 ₽<del>26 000 ₽</del></p>
                                     <button class="_btn _btn-dark-hover _btn-dark _mobile-show _hover">Купить</button>
                                 </div>
                             </article>
                         </div>
                         <div class="grid__item" data-replace-width="768">
-                            <article class="projector__card">
-                                <div class="projector__card-img">
+                            <article class="projector-card">
+                                <div class="projector-card__img">
                                     <a href="" data-replace-new-position="beforebegin">
                                         <img src="img/projectors/projector-1.png" alt="">
                                     </a>
                                 </div>
-                                <div class="projector__card-info">
-                                    <a href="" class="projector__card-name _hover"><span
+                                <div class="projector-card__info">
+                                    <a href="" class="projector-card__name _hover"><span
                                             class="_desctop-show">Светодиодный</span>
                                         <br>
                                         ГОБО IGP S200 PLUS
                                     </a>
-                                    <ol class="projector__card-characteristic" data-replace-old-position="afterbegin">
+                                    <ol class="projector-card__characteristic" data-replace-old-position="afterbegin">
                                         <li class="_replache" data-replace-element>Мощность 50 Вт</li>
                                         <li class="_mobile-show">Один слайд. Статичная проекция.</li>
                                         <li class="_mobile-show">Рек. расстояние до 3,5 метров.</li>
                                     </ol>
-                                    <p class="projector__card-price"><span></span> 22 000 ₽<del>26 000 ₽</del></p>
+                                    <p class="projector-card__price"><span></span> 22 000 ₽<del>26 000 ₽</del></p>
                                     <button class="_btn _btn-dark-hover _btn-dark _mobile-show _hover">Купить</button>
                                 </div>
                             </article>
                         </div>
                         <div class="grid__item" data-replace-width="768">
-                            <article class="projector__card">
-                                <div class="projector__card-img">
+                            <article class="projector-card">
+                                <div class="projector-card__img">
                                     <a href="" data-replace-new-position="beforebegin">
                                         <img src="img/projectors/projector-1.png" alt="">
                                     </a>
                                 </div>
-                                <div class="projector__card-info">
-                                    <a href="" class="projector__card-name _hover">
+                                <div class="projector-card__info">
+                                    <a href="" class="projector-card__name _hover">
                                         GoboPro GBP-8004<br>
                                         <span class="_desctop-show">Влагозащищенный вращающийся</span>
                                     </a>
-                                    <ol class="projector__card-characteristic" data-replace-old-position="afterbegin">
+                                    <ol class="projector-card__characteristic" data-replace-old-position="afterbegin">
                                         <li class="_replache" data-replace-element>Мощность 50 Вт</li>
                                         <li class="_mobile-show">Один слайд. Статичная проекция.</li>
                                         <li class="_mobile-show">Рек. расстояние до 3,5 метров.</li>
                                     </ol>
-                                    <p class="projector__card-price"><span></span> 22 000 ₽<del>26 000 ₽</del></p>
+                                    <p class="projector-card__price"><span></span> 22 000 ₽<del>26 000 ₽</del></p>
                                     <button class="_btn _btn-dark-hover _btn-dark _mobile-show _hover">Купить</button>
                                 </div>
                             </article>
@@ -590,8 +584,18 @@
                             <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-4.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-5.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-1.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-2.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-4.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-5.png" alt=""></a>
                         </div>
                         <div class="_ticker-text">
+                            <a href=""><img src="img/ticker/ticker-1.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-2.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-4.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-5.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-1.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-2.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
@@ -606,8 +610,19 @@
                             <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-4.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-5.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-1.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-2.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-4.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-5.png" alt=""></a>
                         </div>
-                        <div class="_ticker-text"><a href=""><img src="img/ticker/ticker-1.png" alt=""></a>
+                        <div class="_ticker-text">
+                            <a href=""><img src="img/ticker/ticker-1.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-2.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-4.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-5.png" alt=""></a>
+                            <a href=""><img src="img/ticker/ticker-1.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-2.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-3.png" alt=""></a>
                             <a href=""><img src="img/ticker/ticker-4.png" alt=""></a>
@@ -625,7 +640,7 @@
                 <div class="section__flex">
                     <div class="section__flex-left">
                         <div class="faq__title" data-replace-old-position="afterend">
-                            <h2>FAQ</h2>
+                            <h2>FAQ - Вопросы по этому блоку</h2>
                             <p class="_mobile-show">Задайте нам свой вопроси мы всегда поможем вам</p>
                             <button class="_btn _btn-orange" data-replace-element>Задать вопрос</button>
                         </div>
@@ -801,8 +816,8 @@
         </div>
     </section>
 
-    @@include('./html/big-form.html') 
- 
+    @@include('./html/parts/big-form.html')
+
 </main>
 
 @@include('./html/footer.html')

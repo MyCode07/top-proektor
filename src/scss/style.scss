@@ -49,19 +49,16 @@
 // load hero
 @import "parts/hero";
 
-// load section
-@import "parts/section";
-
 // load grid
 @import "parts/grid";
+
+// load section
+@import "parts/section";
 
 // load card
 @import "parts/cards";
 
-
-
 .pages {
-
     position: fixed;
     top: 50%;
     left: 0;

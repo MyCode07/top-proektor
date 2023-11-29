@@ -1,4 +1,4 @@
-.where-card {
+.area-card {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -10,7 +10,7 @@
         flex-direction: column-reverse;
     }
 
-    // .where-card__content
+    // .area-card__content
 
     &__content {
         display: flex;
@@ -30,7 +30,7 @@
         }
     }
 
-    // .where-card__title
+    // .area-card__title
 
     &__title {
         margin-right: 20px;
@@ -86,7 +86,7 @@
         }
     }
 
-    // .where-card__list
+    // .area-card__list
 
     &__list {
         width: 57.2%;
@@ -124,7 +124,7 @@
         }
     }
 
-    // .where-card__img
+    // .area-card__img
 
     &__img {
         width: 50%;
@@ -141,14 +141,80 @@
     }
 }
 
-.example__card {
+.how-card {
+    width: 100%;
+
+    @media (min-width: 769px) {
+        max-width: 294px;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        gap: 24px;
+    }
+
+    // .how-card__top
+
+    &__top {
+        @media (min-width: 769px) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            @include adaptive-value("gap", 58, 0, 1);
+        }
+
+        svg {
+            width: 82px;
+            height: 82px;
+
+            @media (max-width: 768px) {
+                width: 48px;
+                height: 48px;
+                flex: 0 0 auto;
+                max-width: unset;
+            }
+        }
+    }
+
+    // .how-card__bottom
+
+    &__bottom {
+        span {
+            display: block;
+            color: $light-grey;
+            @include adaptive-value("font-size", 32, 26, 1);
+            @include adaptive-value("letter-spacing", -0.96, -0.6, 1);
+            font-weight: 500;
+            @include adaptive-value("margin-bottom", 16, 8, 1);
+        }
+
+        p {
+            display: block;
+            color: #b1b1b1;
+            font-size: 14px;
+            line-height: 1.2;
+            letter-spacing: -0.42px;
+        }
+
+        a {
+            color: $orange;
+        }
+
+        button {
+            width: 140px;
+            margin-top: 24px;
+        }
+    }
+}
+
+.example-card {
     display: block;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.29);
-    overflow: hidden;
-    @include adaptive-value("height", 530, 331, 1);
 
     position: relative;
+    overflow: hidden;
+    padding-bottom: 177.2%;
 
     &:before {
         position: absolute;
@@ -161,8 +227,12 @@
     }
 
     img {
-        min-height: 100%;
         object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
     }
 
     div {
@@ -172,6 +242,7 @@
         display: flex;
         align-items: center;
         gap: 5.6px;
+        z-index: 1;
 
         svg {
             width: 24px;
@@ -230,7 +301,22 @@
     }
 }
 
-.projector__card {
+.gobo-card {
+    display: block;
+    position: relative;
+    padding-bottom: 100%;
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.projector-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,9 +341,9 @@
         padding-right: 25px;
     }
 
-    // .projector__card-img
+    // .projector-card__img
 
-    &-img {
+    &__img {
         a {
             display: block;
             background-color: $white;
@@ -286,9 +372,9 @@
         }
     }
 
-    // .projector__card-info
+    // .projector-card__info
 
-    &-info {
+    &__info {
         height: 100%;
 
         @media (min-width: 769px) {
@@ -301,9 +387,9 @@
         }
     }
 
-    // .projector__card-name
+    // .projector-card__name
 
-    &-name {
+    &__name {
         color: $black;
         font-size: 24px;
         font-weight: 500;
@@ -319,9 +405,9 @@
         }
     }
 
-    // .projector__card-characteristic
+    // .projector-card__characteristic
 
-    &-characteristic {
+    &__characteristic {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -357,9 +443,9 @@
         }
     }
 
-    // .projector__card-price
+    // .projector-card__price
 
-    &-price {
+    &__price {
         color: $black;
         font-size: 24px;
         font-weight: 500;
@@ -382,9 +468,9 @@
         }
     }
 
-    // .projector__card-sign
+    // .projector-card__sign
 
-    &-sign {
+    &__sign {
         position: absolute;
         z-index: 2;
         left: 12px;

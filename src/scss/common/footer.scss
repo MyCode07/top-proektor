@@ -26,6 +26,16 @@
     &__body {
     }
 
+    // .footer__flex
+
+    &__flex {
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
     // .footer__top
 
     &__top {

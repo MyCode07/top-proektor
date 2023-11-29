@@ -17,7 +17,7 @@ if (sliders.length) {
                 ],
                 loop: true,
                 slidesPerView: 'auto',
-                spaceBetween: 12,
+                spaceBetween: 18,
 
                 navigation: {
                     prevEl: prev,
@@ -37,7 +37,7 @@ if (sliders.length) {
                 ],
                 loop: true,
                 slidesPerView: 'auto',
-                spaceBetween: 12,
+                spaceBetween: 16,
 
                 navigation: {
                     prevEl: prev,
@@ -50,6 +50,5 @@ if (sliders.length) {
                 },
             })
         }
-
     })
 }
