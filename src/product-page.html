@@ -6,12 +6,12 @@
 
 <main>
 
-    <section class="hero product-hero">
-        <div class="hero__container _container">
-            <div class="hero__body">
-                <div class="hero__flex">
-                    <div class="hero__left">
-                        <div class="product__imagebox">
+    <section class="section product-section" data-replace-width="992">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__flex">
+                    <div class="section__left">
+                        <div class="product__imagebox" data-replace-new-position="beforebegin">
                             <div class="badges">
                                 <a href="" class="sale">Акция</a>
                                 <a href="" class="nabor">Наш выбор</a>
@@ -32,11 +32,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__right">
+                    <div class="section__right">
                         <div class="product__content">
-                            <label class="article">Артикул: TPR-1503</label>
-                            <h1>Рекламный гобо проектор Gobopro TPR-1503 уличный</h1>
-                            <div class="product__info">
+                            <div data-replace-element>
+                                <label class="article">Артикул: TPR-1503</label>
+                                <h1>Рекламный гобо проектор Gobopro TPR-1503 уличный</h1>
+                            </div>
+                            <div class="product__info" data-replace-old-position="beforebegin">
                                 <ol class="product__characteristic">
                                     <li>Один слайд. Статичная проекция.</li>
                                     <li>Рек. расстояние до 3,5 метров.</li>
@@ -65,7 +67,45 @@
             </div>
     </section>
 
-@@include('./html/parts/big-form.html')
+    <section class="section characteristics">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__flex">
+                    <h2>Характеристики <br>
+                        Gobopro TPR-1503</h2>
+                    <ol>
+                        <li>
+                            <p>1. В первую очередь, по сроку гарантии. Там, где дольше гарантия, больше вероятность, что
+                                поставщик тесно связан с
+                                производителем. Мы даём гарантию 2 года.
+                            </p>
+                        </li>
+                        <li>
+                            <p>2. Во-вторых, по количеству и качеству выполненных работ. Продукция марки GoboPro давно
+                                зарекомендовала себя на
+                                российском рынке. Наша компания осуществляет поставки для самых известных мировых
+                                брендов в России: MacDonald's, Burger
+                                King, IKEA, Dodo Pizza, Knauf и т.д. Наша продукция установлена в Калининграде и
+                                Владивостоке, в Ханты-Мансийске и
+                                Израиле.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/black.html')
+
+    @@include('./html/parts/gobo.html')
+
+    @@include('./html/parts/projector.html')
+
+    @@include('./html/parts/ticker.html')
+
+    @@include('./html/parts/faq.html')
+
+    @@include('./html/parts/big-form.html')
 
 
 </main>

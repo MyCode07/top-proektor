@@ -1,0 +1,69 @@
+@@include('./html/head.html', {
+"title":"Услуги",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="hero home-page__hero">
+        <div class="hero__image">
+            <picture>
+                <source srcset="img/services-hero-bgi.png" media="(min-width:769px)">
+                <source srcset="img/services-hero-bgi-mobile.png" media="(max-width:768px)">
+                <img et="img/services-hero-bgi-mobile.png" alt="">
+            </picture>
+        </div>
+        <div class="hero__container _container">
+            <div class="hero__body">
+                <h1>Слайд-мэппинг</h1>
+                <p>Мы занимаемся разработкой видеоконтента любой сложности:2D, 3D, персонажная анимация, контент для
+                    mapping шоу</p>
+                <button class="_btn _btn-orange">Рассчитать стоимость</button>
+                <span>Стоимость от 20 000 Р</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section details">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__flex">
+                    <h2>Подробнее о услуге</h2>
+                    <ol>
+                        <li>
+                            <p> В первую очередь, по сроку гарантии. Там, где дольше гарантия, больше вероятность, что
+                                поставщик тесно связан с
+                                производителем. Мы даём гарантию 2 года.
+                            </p>
+                        </li>
+                        <li>
+                            <p> Во-вторых, по количеству и качеству выполненных работ. Продукция марки GoboPro давно
+                                зарекомендовала себя на
+                                российском рынке. Наша компания осуществляет поставки для самых известных мировых
+                                брендов в России: MacDonald's, Burger
+                                King, IKEA, Dodo Pizza, Knauf и т.д. Наша продукция установлена в Калининграде и
+                                Владивостоке, в Ханты-Мансийске и
+                                Израиле.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/example.html', {
+    "class":"_textnone",
+    "text":"Пример работы",
+    })
+
+    @@include('./html/parts/ticker.html')
+
+    @@include('./html/parts/faq.html')
+
+    @@include('./html/parts/big-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

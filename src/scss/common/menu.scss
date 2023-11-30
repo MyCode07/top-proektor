@@ -36,6 +36,8 @@
     }
 
     nav {
+        margin-bottom: 99px;
+
         & > ul {
             & > :not(:last-child) {
                 border-bottom: 1px solid #333333;
@@ -190,5 +192,84 @@
                 }
             }
         }
+    }
+
+    // .menu__bottom
+
+    &__bottom {
+        // .menu__bottom-phone
+
+        &-phone {
+            color: $light-grey;
+            font-size: 42px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        // .menu__bottom-email
+
+        &-email {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 48px;
+            color: $orange;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        // .menu__bottom-addresses
+
+        &-addresses {
+            margin-bottom: 40px;
+
+            & > :not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            a {
+                display: block;
+                color: $light-text;
+                font-weight: 500;
+                line-height: 1;
+                letter-spacing: -0.03em;
+            }
+        }
+    }
+
+    ._socials {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        a {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba($color: #fff, $alpha: 0.3);
+            border-radius: 50%;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+._btn {
+    // ._btn-social
+
+    &-social {
+    }
+
+    // ._btn-hover
+
+    &-hover {
     }
 }

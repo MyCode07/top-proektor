@@ -50,5 +50,26 @@ if (sliders.length) {
                 },
             })
         }
+        else if (section.classList.contains('solutions')) {
+            new Swiper(slider, {
+                modules: [
+                    Navigation, Pagination
+                ],
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+
+            })
+        }
     })
 }

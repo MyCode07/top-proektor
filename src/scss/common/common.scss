@@ -82,6 +82,13 @@ h3 {
     @include adaptive-value(" letter-spacing", -0.96, -0.72, 1);
 }
 
+h5 {
+    color: $white;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
 .swiper {
     overflow: visible;
 }
@@ -133,6 +140,30 @@ h3 {
 
         svg {
             transform: rotate(0deg);
+        }
+    }
+
+    &-white {
+        background-color: $white;
+        color: $main;
+        border-color: $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &-transparent {
+        border-color: $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $white;
+                color: $main;
+            }
         }
     }
 }

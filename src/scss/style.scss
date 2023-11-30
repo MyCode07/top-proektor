@@ -58,6 +58,12 @@
 // load card
 @import "parts/cards";
 
+
+// load single-product
+@import "parts/single-product";
+
+
+
 .pages {
     position: fixed;
     top: 50%;
@@ -94,3 +100,4 @@
         }
     }
 }
+ 
