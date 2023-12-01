@@ -2,6 +2,7 @@ import { accordeon } from "./static/accordeon.js";
 // import { maskInputs } from "./static/inputmask.js";
 import { replaceDomElements } from "./static/replace.js";
 
+import "./parts/catalog.js";
 import "./parts/sliders.js";
 import "./parts/popup.js";
 import "./parts/menu.js"; 
@@ -23,10 +24,10 @@ accordeon();
 
 // maskInputs('+7 999 999 999 999', '.phone')
 
-// document.addEventListener('click', function (e) {
-//     let targetEl = e.target;
+document.addEventListener('click', function (e) {
+    let targetEl = e.target;
 
-//     if (targetEl.classList.contains('pages-close')) {
-//         document.querySelector('.pages').classList.toggle('_hide');
-//     }
-// }) 
+    if (targetEl.classList.contains('pages-close')) {
+        document.querySelector('.pages').classList.toggle('_hide');
+    }
+}) 

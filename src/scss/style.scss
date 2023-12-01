@@ -61,11 +61,14 @@
 // load card
 @import "parts/cards";
 
+// load catalog
+@import "parts/catalog";
+
+// load about
+@import "parts/about";
 
 // load single-product
 @import "parts/single-product";
-
-
 
 .pages {
     position: fixed;
@@ -82,8 +85,6 @@
     &._hide {
         transform: translate(-100%, -50%);
     }
-
-    display: none;
 
     button {
         padding: 5px;
@@ -103,4 +104,3 @@
         }
     }
 }
- 

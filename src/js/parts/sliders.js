@@ -1,8 +1,7 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
-
 if (sliders.length) {
     sliders.forEach(slider => {
         const section = slider.closest('section');
@@ -15,7 +14,7 @@ if (sliders.length) {
                 modules: [
                     Navigation, Pagination
                 ],
-                loop: true,
+                // loop: true,
                 slidesPerView: 'auto',
                 spaceBetween: 18,
 
@@ -70,6 +69,28 @@ if (sliders.length) {
                 },
 
             })
+        }
+        else if (section.classList.contains('product-section')) {
+            let productSlider = new Swiper('.product__slider-thumbs .swiper', {
+                modules: [FreeMode],
+                spaceBetween: 10,
+                slidesPerView: 'auto',
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+
+            new Swiper('.product__slider .swiper', {
+                modules: [Thumbs, Pagination],
+                spaceBetween: 10,
+                centeredSlides: true,
+                thumbs: {
+                    swiper: productSlider,
+                },
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+            });
         }
     })
 }

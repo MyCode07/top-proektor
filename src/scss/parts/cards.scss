@@ -783,9 +783,10 @@
             display: flex;
             align-items: center;
 
-            button {
+            button,
+            a {
                 height: 54px;
-                padding: 0 32px;
+                padding: 0 10px;
                 text-align: center;
                 font-size: 18px;
                 font-weight: 500;
@@ -793,6 +794,11 @@
                 letter-spacing: -0.03em;
                 color: $black;
                 border-radius: 4px;
+                width: 50%;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
             }
 
             ._hover {
@@ -1153,6 +1159,8 @@
 }
 
 .contact-card {
+    max-width: 237px;
+
     h3 {
         color: $white;
         white-space: nowrap;
