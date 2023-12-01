@@ -1018,6 +1018,8 @@
 }
 
 .slide {
+    @include adaptive-value("margin-bottom", 80, 48, 1);
+
     h2 {
         color: $light-grey;
         @include adaptive-value("margin-bottom", 59, 39, 1);
