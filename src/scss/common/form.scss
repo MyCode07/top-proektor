@@ -21,18 +21,60 @@
     &__item {
         width: 100%;
         border-bottom: 1px solid $black-30;
-        height: 51px;
         position: relative;
 
-        @media (max-width: 768px) {
-            height: 41px;
+        input,
+        textarea {
+            height: 100%;
+            padding-top: 12px;
+            width: 100%;
+            color: $black;
+            font-size: 20px;
+            display: block;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+
+            &._active,
+            &:focus,
+            &:active {
+                + span {
+                    font-size: 13px;
+
+                    @media (max-width: 768px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        input {
+            height: 51px;
+
+            @media (max-width: 768px) {
+                height: 41px;
+            }
+        }
+
+        textarea {
+            height: 85px;
+            resize: none;
+            padding-top: 18px;
+
+            @media (max-width: 768px) {
+                height: 81px;
+            }
         }
 
         @media (any-hover: hover) {
             &:hover {
                 span {
                     font-size: 13px;
-                    letter-spacing: -0.39px;
+
+                    @media (max-width: 768px) {
+                        font-size: 10px;
+                    }
                 }
 
                 border-color: #020101;
@@ -48,22 +90,7 @@
             color: rgba($color: $black, $alpha: 0.5);
             font-size: 20px;
             font-weight: 400;
-            letter-spacing: -0.6px;
-
-            @media (max-width: 768px) {
-                font-size: 16px;
-                letter-spacing: -0.48px;
-            }
-        }
-
-        input,
-        textarea {
-            height: 100%;
-            padding-top: 5px;
-            width: 100%;
-            color: $black;
-
-            font-size: 20px;
+            letter-spacing: -0.03em;
 
             @media (max-width: 768px) {
                 font-size: 16px;
@@ -72,11 +99,6 @@
     }
 
     ._textarea {
-        height: 85px;
-
-        @media (max-width: 768px) {
-            height: 81px;
-        }
         @include adaptive-value("margin-bottom", 51, 33, 1);
     }
 
@@ -96,7 +118,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 1.2;
-            letter-spacing: -0.42px;
+            letter-spacing: -0.03em;
         }
 
         a {
@@ -106,7 +128,7 @@
 
     // .form__img
 
-    &__img{
+    &__img {
         max-width: 841px;
     }
 }

@@ -7,6 +7,7 @@ body {
     font-style: normal;
     color: $dark-text;
     font-family: "TTHoves", "Halvetica", sans-serif;
+    font-family: "TTHoves";
     font-size: 16px;
     background-color: $main;
     font-style: normal;
@@ -55,12 +56,17 @@ svg {
     max-width: 100%;
 }
 
+h1,
+h2,
+h3 {
+    letter-spacing: -0.03em;
+}
+
 h1 {
     position: relative;
     z-index: 2;
     color: $white;
     font-weight: 500;
-    letter-spacing: -0.03em;
     @include adaptive-value("font-size", 82, 41, 1);
 
     @media (max-width: 768px) {
@@ -72,14 +78,12 @@ h2 {
     color: #020101;
     font-weight: 500;
     @include adaptive-value("font-size", 62, 32, 1);
-    @include adaptive-value(" letter-spacing", -1.86, -0.96, 1);
 }
 
 h3 {
     color: #020101;
     font-weight: 500;
     @include adaptive-value("font-size", 32, 24, 1);
-    @include adaptive-value(" letter-spacing", -0.96, -0.72, 1);
 }
 
 h5 {
@@ -101,8 +105,8 @@ h5 {
     color: #f2f2f2;
     text-align: center;
     font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.54px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
     border-radius: 4px;
     border: 1px solid #666;
 
@@ -279,7 +283,7 @@ h5 {
         cursor: no-drop;
     }
 
-    &.swiper-button-lock{
+    &.swiper-button-lock {
         opacity: 0;
     }
 }
@@ -311,7 +315,3 @@ h5 {
         }
     }
 }
-
-
-
-

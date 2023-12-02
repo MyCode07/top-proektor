@@ -1,11 +1,11 @@
-import { accordeon } from "./static/accordeon.js"; 
+import { accordeon } from "./static/accordeon.js";
 // import { maskInputs } from "./static/inputmask.js";
 import { replaceDomElements } from "./static/replace.js";
 
 import "./parts/catalog.js";
 import "./parts/sliders.js";
 import "./parts/popup.js";
-import "./parts/menu.js"; 
+import "./parts/menu.js";
 // import "./parts/read-more.js";
 // import "./parts/filters.js";
 
@@ -30,4 +30,17 @@ document.addEventListener('click', function (e) {
     if (targetEl.classList.contains('pages-close')) {
         document.querySelector('.pages').classList.toggle('_hide');
     }
-}) 
+})
+
+
+const inputItems = [...document.querySelectorAll('input ')].concat([...document.querySelectorAll('textarea ')])
+if (inputItems.length) {
+    inputItems.forEach(input => {
+        if (input.closest('.form__item')) {
+            input.addEventListener('input', () => {
+                if (input.value != '') input.classList.add('_active')
+                else input.classList.remove('_active')
+            })
+        }
+    })
+}

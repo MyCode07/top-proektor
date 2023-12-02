@@ -21,7 +21,7 @@
             color: #b1b1b1;
             display: block;
             margin-top: 10px;
-            letter-spacing: -0.48px;
+            letter-spacing: -0.03em;
         }
 
         @media (max-width: 992px) {
@@ -446,12 +446,12 @@
             font-size: 28px;
             font-weight: 300;
             line-height: 1.3;
-            letter-spacing: -0.84px;
+            letter-spacing: -0.03em;
 
             @media (max-width: 992px) {
                 font-size: 20px;
                 font-weight: 400;
-                letter-spacing: -0.6px;
+               
 
                 br {
                     display: none;
@@ -508,12 +508,12 @@
             font-size: 32px;
             font-weight: 500;
             line-height: 1.2;
-            letter-spacing: -0.96px;
+          letter-spacing: -0.03em;
             white-space: nowrap;
 
             @media (max-width: 992px) {
                 font-size: 18px;
-                letter-spacing: -0.54px;
+                
             }
 
             @media (max-width: 768px) {
@@ -642,7 +642,7 @@
         color: $white;
         font-size: 20px;
         line-height: 1.3;
-        letter-spacing: -0.6px;
+          letter-spacing: -0.03em;
     }
 
     p {
@@ -735,7 +735,7 @@
         color: #999;
         font-size: 14px;
         font-weight: 500;
-        letter-spacing: -0.42px;
+       letter-spacing: -0.03em;
 
         @media (max-width: 992px) {
             display: block;
@@ -1007,71 +1007,83 @@
             grid-template-columns: repeat(3, 1fr);
         }
     }
-}
 
-.slide-tabs {
-    border-bottom: 1px solid #666;
-    @include adaptive-value("margin-bottom", 31, 8, 1);
+    // .slide-tabs
 
-    @media (max-width: 600px) {
-        overflow-y: auto;
-        width: 100vw;
-        margin-left: -15px;
-        padding: 0 15px;
+    &-tabs {
+        border-bottom: 1px solid #666;
+        @include adaptive-value("margin-bottom", 31, 8, 1);
 
-        &::-webkit-scrollbar {
-            display: none;
+        @media (max-width: 600px) {
+            overflow-y: auto;
+            width: 100vw;
+            margin-left: -15px;
+            padding: 0 15px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        ol {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+
+            @media (max-width: 600px) {
+                width: fit-content;
+                gap: 15px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                color: $white;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1;
+                letter-spacing: -0.03em;
+                cursor: pointer;
+                padding: 0 10px 20px 10px;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    background-color: $orange;
+                    height: 3px;
+                    width: 100%;
+                    pointer-events: none;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: all 0.3s ease 0s;
+                }
+
+                &._active:before {
+                    opacity: 1;
+                }
+
+                @media (max-width: 600px) {
+                    flex: 0 0 auto;
+                    white-space: nowrap;
+
+                    @include adaptive-value("min-width", 150, 130, 1);
+                }
+            }
         }
     }
 
-    ol {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        width: 100%;
+    // .slide-item
 
-        @media (max-width: 600px) {
-            width: fit-content;
-            gap: 15px;
-        }
+    &-item {
+        display: none;
 
-        li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            color: $white;
-            text-align: center;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1;
-            letter-spacing: -0.03em;
-            cursor: pointer;
-            padding: 0 10px 20px 10px;
-
-            &:before {
-                position: absolute;
-                content: "";
-                left: 0;
-                bottom: 0;
-                background-color: $orange;
-                height: 3px;
-                width: 100%;
-                pointer-events: none;
-                z-index: 1;
-                opacity: 0;
-                transition: all 0.3s ease 0s;
-            }
-
-            &._active:before {
-                opacity: 1;
-            }
-
-            @media (max-width: 600px) {
-                flex: 0 0 auto;
-                white-space: nowrap;
-
-                @include adaptive-value("min-width", 150, 130, 1);
-            }
+        &._active {
+            display: block;
         }
     }
 }

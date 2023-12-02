@@ -23,11 +23,28 @@ document.addEventListener('click', function (e) {
         targetEl.classList.add('_active');
     }
 
-    if (targetEl.classList.contains('slide-tabs__tab')){
+    if (targetEl.classList.contains('slide-tabs__tab')) {
         e.preventDefault();
 
-        const allTabs = document.querySelectorAll('.slide-tabs__tab');
-        allTabs.forEach(tab => tab.classList.remove('_active'))
-        targetEl.classList.add('_active');
+        if (!targetEl.classList.contains('_active')) {
+            const tabId = targetEl.dataset.tab;
+            const slideSection = targetEl.closest('section.slide');
+            const allTabs = slideSection.querySelectorAll('.slide-tabs__tab');
+            const allTabsContnet = slideSection.querySelectorAll('.slide-item');
+
+            allTabsContnet.forEach(contnet => {
+                if (contnet.dataset.tabContent == tabId)
+                    contnet.classList.add('_active')
+                else
+                    contnet.classList.remove('_active')
+            })
+
+            allTabs.forEach(tab => {
+                if (tab.dataset.tab == tabId)
+                    tab.classList.add('_active')
+                else
+                    tab.classList.remove('_active')
+            })
+        }
     }
 })
