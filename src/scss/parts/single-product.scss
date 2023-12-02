@@ -161,7 +161,7 @@
             justify-content: center;
 
             img {
-                width: 67%;
+                width: 74%;
                 max-width: 415px;
 
                 @media (max-width: 768px) {
@@ -397,6 +397,7 @@
             max-width: 607px;
             width: 100%;
             @include adaptive-value("margin-right", 89, 0, 1);
+            @include adaptive-value("font-size", 52, 32, 1);
         }
 
         ol {

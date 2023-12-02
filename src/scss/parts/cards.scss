@@ -496,6 +496,10 @@
 }
 
 .catalog__card {
+    @media (max-width: 768px) {
+        border-radius: 4px;
+    }
+
     border: 1px solid $black;
     * {
         text-align: left;
@@ -529,6 +533,11 @@
 
     &-img {
         width: 100%;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
 
         a {
             display: block;
@@ -953,7 +962,6 @@
 
     h3 {
         color: $light-grey;
-        @include adaptive-value("margin-bottom", 61, 81, 1);
     }
 
     button {
@@ -968,12 +976,17 @@
     }
 
     div {
+        height: 100%;
         position: absolute;
-        left: 40px;
-        top: 37px;
+        left: 0px;
+        top: 0px;
         display: flex;
+        justify-content: space-between;
         flex-direction: column;
         z-index: 2;
+        padding-top: 37px;
+        padding-bottom: 37px;
+        padding-left: 40px;
     }
 }
 

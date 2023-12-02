@@ -907,6 +907,8 @@
 }
 
 .why {
+    @include adaptive-value("margin-bottom", 81, 56, 1);
+
     .section__body {
         background-color: $black;
 
@@ -1182,10 +1184,6 @@
 
             @media (max-width: 1240px) {
                 font-size: 32px;
-
-                br {
-                    display: none;
-                }
             }
 
             @media (max-width: 768px) {
@@ -1231,7 +1229,7 @@
 
         .section__flex-left {
             @media (min-width: 993px) {
-                max-width: 452px;
+                max-width: 500px;
                 width: 100%;
             }
 
@@ -1242,7 +1240,6 @@
 
         .section__flex-right {
             background-color: $orange;
-            width: 100%;
 
             @media (min-width: 993px) {
                 min-height: 100%;
