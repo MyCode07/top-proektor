@@ -6,12 +6,10 @@
 
 <main>
     <section class="hero home-hero">
-        <div class="hero__image">
-            <video autoplay muted loop>
-                <source src="files/projector.mp4" type="video/mp4">
-                <source src="files/projector.ogg" type="video/ogg">
+        <div class="hero__image hero-video">
+            <video preload="none" autoplay="false" poster="img/hero-bgi.png" muted="false" loop="false">
+                <source src="files/projector.webm" type="video/webm">
             </video>
-            <!-- <iframe src="" frameborder="0" allowfullscreen></iframe> -->
         </div>
         <div class="hero__container _container">
             <div class="hero__body">
@@ -244,11 +242,11 @@
                             <div class="form__row">
                                 <div class="form__item">
                                     <span>Ваше имя</span>
-                                    <input type="text" name="name" value="" placeholder="">
+                                    <input type="text"  value="" placeholder="">
                                 </div>
                                 <div class="form__item">
                                     <span>Ваш телефон</span>
-                                    <input type="text" name="name" value="" placeholder="">
+                                    <input type="text" class="_phone-mask" value="" placeholder="">
                                 </div>
                             </div>
                             <div class="form__row">

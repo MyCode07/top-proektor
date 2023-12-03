@@ -11,7 +11,9 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition: opacity 0.3s ease 0s;
+    transition:
+        opacity 0.3s ease 0s,
+        visibility 0.3s ease 0s;
 
     @media (max-width: 992px) {
         top: 0;
@@ -84,12 +86,14 @@
     .popup__body {
         position: relative;
         margin-top: 170px;
+        margin-bottom: 100px;
         border-radius: 8px;
         background: $light-grey;
         padding: 59px 71px 95px 44px;
 
         @media (max-width: 992px) {
             margin-top: 0;
+            margin-bottom: 0;
             border-radius: 0;
             width: 100vw;
             margin-left: -15px;
