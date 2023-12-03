@@ -370,6 +370,16 @@
                 object-fit: contain;
             }
         }
+
+        ._replache {
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+
+            @media (min-width: 769px) {
+                display: none;
+            }
+        }
     }
 
     // .projector-card__info
@@ -433,13 +443,10 @@
             margin-bottom: 20px;
             align-items: flex-start;
         }
-    }
-
-    ._replache {
-        @media (max-width: 768px) {
-            font-size: 10px;
-            text-transform: uppercase;
-            margin-bottom: 17px;
+        ._replache {
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
 
@@ -1232,6 +1239,7 @@
             width: 80px;
             height: 80px;
             padding: 8px 13px;
+            flex: 0 0 auto;
         }
 
         img {

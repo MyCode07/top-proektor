@@ -193,9 +193,16 @@
         }
 
         li {
+            display: flex;
+
             label {
                 display: flex;
+                flex-direction: row-reverse;
                 cursor: pointer;
+
+                @media (max-width: 992px) and (min-width: 450px) {
+                    align-items: center;
+                }
 
                 span {
                     flex: 0 0 auto;
@@ -208,8 +215,11 @@
                     align-items: center;
                     justify-content: center;
                     position: relative;
-                    top: 5px;
                     margin-right: 11px;
+
+                    @media (min-width: 992px) {
+                        top: 5px;
+                    }
 
                     &:after {
                         content: "";
@@ -227,6 +237,10 @@
                     visibility: hidden;
                 }
 
+                input:checked + span:after {
+                    background-color: $black;
+                }
+
                 p {
                     color: $black;
                     @include adaptive-value("font-size", 20, 16, 1);
@@ -236,8 +250,4 @@
             }
         }
     }
-}
-
-label input[type="radio"]:checked ~ span:after {
-    background-color: $black;
 }

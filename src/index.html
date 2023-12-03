@@ -7,11 +7,11 @@
 <main>
     <section class="hero home-hero">
         <div class="hero__image">
-            <picture>
-                <source srcset="img/hero-bgi.png" media="(min-width:769px)">
-                <source srcset="img/hero-bgi-mobile.png" media="(max-width:768px)">
-                <img et="img/hero-bgi-mobile.png" alt="">
-            </picture>
+            <video autoplay muted loop>
+                <source src="files/projector.mp4" type="video/mp4">
+                <source src="files/projector.ogg" type="video/ogg">
+            </video>
+            <!-- <iframe src="" frameborder="0" allowfullscreen></iframe> -->
         </div>
         <div class="hero__container _container">
             <div class="hero__body">
@@ -391,7 +391,7 @@
     @@include('./html/parts/black.html')
 
     @@include('./html/parts/gobo.html')
-    
+
     @@include('./html/parts/projector.html')
 
     @@include('./html/parts/ticker.html')
