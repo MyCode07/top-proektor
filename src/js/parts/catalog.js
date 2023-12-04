@@ -52,13 +52,9 @@ document.addEventListener('click', function (e) {
 
     if (targetEl.closest('._person') && !targetEl.closest('._person._active')) {
         e.preventDefault();
-        backGround.classList.add('_active');
         targetEl.classList.add('_active');
-        document.body.classList.add('_noscroll');
     } else {
         const personVideo = document.querySelector('._person');
-        backGround.classList.remove('_active');
         personVideo.classList.remove('_active');
-        document.body.classList.remove('_noscroll');
     }
 })
