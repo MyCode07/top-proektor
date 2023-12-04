@@ -14,10 +14,8 @@ if (sliders.length) {
                 modules: [
                     Navigation, Pagination
                 ],
-                // loop: true,
                 slidesPerView: 'auto',
                 spaceBetween: 18,
-
                 navigation: {
                     prevEl: prev,
                     nextEl: next,
