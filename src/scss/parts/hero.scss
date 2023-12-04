@@ -13,7 +13,8 @@
         width: 100%;
         height: 100%;
 
-        video,iframe {
+        video,
+        iframe {
             display: block;
             width: 100%;
             height: 100%;
@@ -92,26 +93,58 @@
     }
 
     ._person {
-        border-radius: 50%;
         position: absolute;
         right: 0;
-
         @include adaptive-value("bottom", -55, 0, 1);
         @include adaptive-value("width", 124, 100, 1);
         @include adaptive-value("height", 124, 100, 1);
+        transition: all 0.3s ease 0s;
 
-        img {
+        z-index: 10;
+
+        .close {
+            cursor: pointer;
+            display: none;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 100;
+            width: 12px;
+            height: 12px;
+
+            svg {
+                flex: 0 0 auto;
+                stroke: $white;
+                width: 12px;
+                height: 12px;
+                pointer-events: none;
+            }
+        }
+
+        &-video {
+            pointer-events: none;
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            display: block;
+
+            video,
+            iframe {
+                clip-path: circle(50%);
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease 0s;
+            }
         }
 
         @media (max-width: 768px) {
             display: none;
         }
 
-        svg {
+        .sound {
             position: absolute;
             top: 8.4px;
             left: 50%;
@@ -119,6 +152,30 @@
             width: 17.4px;
             height: 17.4px;
             flex: 0 0 auto;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        &._active {
+            bottom: 0 !important;
+            width: 100%;
+            height: 100%;
+            z-index: 101;
+
+            .close {
+                display: flex;
+            }
+
+            ._person-video {
+                video,
+                iframe {
+                    clip-path: circle(100%);
+                }
+            }
+
+            .sound {
+                display: none;
+            }
         }
     }
 
@@ -245,5 +302,22 @@
                 }
             }
         }
+    }
+}
+
+._background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 200vh;
+    background-color: rgba($color: $main, $alpha: 0.8);
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+
+    &._active {
+        opacity: 1;
     }
 }
