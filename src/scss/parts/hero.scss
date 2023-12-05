@@ -250,19 +250,21 @@
         p {
             margin: 26px 0 40px 0;
 
-            @media (max-width: 768px) {
-                display: none;
-            }
-
             @media (max-width: 1024px) {
                 max-width: 60%;
                 width: 100%;
+            }
+
+            @media (max-width: 768px) {
+                max-width: 90%;
+                text-align: center;
+                margin-inline: auto;
             }
         }
 
         ._btn {
             @media (max-width: 768px) {
-                display: none;
+                width: 100%;
             }
         }
     }

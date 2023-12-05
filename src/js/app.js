@@ -2,6 +2,7 @@ import { accordeon } from "./static/accordeon.js";
 import { replaceDomElements } from "./static/replace.js";
 import { stickyHeader } from "./parts/header.js";
 import { maskInputs } from "./static/inputmask.js";
+import { createMap } from "./parts/map.js";
 
 import "./parts/catalog.js";
 import "./parts/sliders.js";
@@ -20,6 +21,7 @@ stickyHeader()
 replaceDomElements();
 accordeon();
 maskInputs('+7 999 999 999 999', '._phone-mask')
+createMap();
 
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
