@@ -52,9 +52,10 @@
 
         a {
             display: block;
+
             svg {
                 flex: 0 0 auto;
-                @include adaptive-value("width", 147, 80, 1);
+                @include adaptive-value("width", 147, 86, 1);
                 height: 23px;
                 fill: $white;
                 max-width: none;
@@ -73,8 +74,8 @@
             display: none;
         }
 
-        width: 83px;
-        height: 25px;
+        width: 86px;
+        height: 26px;
     }
 
     // .header__right
@@ -109,11 +110,21 @@
                 width: 35px;
                 height: 35px;
 
+                @media (max-width: 768px) {
+                    width: 40px;
+                    height: 40px;
+                }
+
                 svg {
                     position: relative;
                     flex: 0 0 auto;
                     width: 14px;
                     height: 14px;
+
+                    @media (max-width: 768px) {
+                        width: 18px;
+                        height: 18px;
+                    }
                 }
             }
 
@@ -121,6 +132,11 @@
                 svg {
                     width: 14px;
                     height: 12px;
+
+                    @media (max-width: 768px) {
+                        width: 18px;
+                        height: 16px;
+                    }
 
                     @media (min-width: 1025px) {
                         top: 1px;
@@ -181,6 +197,11 @@
         align-items: center;
         justify-content: center;
         position: relative;
+
+        @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+        }
 
         span {
             position: absolute;

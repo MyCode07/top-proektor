@@ -70,6 +70,12 @@
 
         &-item {
         }
+
+        ol {
+            @media (max-width: 768px) {
+                margin-top: 20px;
+            }
+        }
     }
 }
 
@@ -451,7 +457,6 @@
             @media (max-width: 992px) {
                 font-size: 20px;
                 font-weight: 400;
-               
 
                 br {
                     display: none;
@@ -508,12 +513,11 @@
             font-size: 32px;
             font-weight: 500;
             line-height: 1.2;
-          letter-spacing: -0.03em;
+            letter-spacing: -0.03em;
             white-space: nowrap;
 
             @media (max-width: 992px) {
                 font-size: 18px;
-                
             }
 
             @media (max-width: 768px) {
@@ -642,7 +646,7 @@
         color: $white;
         font-size: 20px;
         line-height: 1.3;
-          letter-spacing: -0.03em;
+        letter-spacing: -0.03em;
     }
 
     p {
@@ -735,7 +739,7 @@
         color: #999;
         font-size: 14px;
         font-weight: 500;
-       letter-spacing: -0.03em;
+        letter-spacing: -0.03em;
 
         @media (max-width: 992px) {
             display: block;
@@ -1192,7 +1196,7 @@
             font-size: 52px;
             font-weight: 500;
             line-height: 1;
-            letter-spacing: 0.03em;
+            letter-spacing: -0.03em;
 
             @media (max-width: 1240px) {
                 font-size: 32px;
@@ -1213,7 +1217,7 @@
             font-size: 14px;
             font-weight: 500;
             line-height: 1;
-            letter-spacing: 0.03em;
+            letter-spacing: -0.03em;
 
             @media (max-width: 768px) {
                 font-size: 14px;
@@ -1491,26 +1495,31 @@
     @media (min-width: 993px) {
         &:after {
             position: absolute;
+            background-image: url("@img/footer-smal-blik.png");
+            background-repeat: no-repeat;
+            background-size: cover;
             content: "";
-            right: -70px;
-            top: 149px;
-            width: 221px;
-            height: 221px;
-            fill: #ff6201;
-            background-color: $orange;
-            filter: blur(97px);
+            right: -250px;
+            top: 0px;
+            width: 609px;
+            height: 609px;
         }
+    }
 
-        &:before {
-            position: absolute;
-            content: "";
-            left: -58px;
-            bottom: -116px;
-            width: 221px;
-            height: 221px;
-            fill: #ff6201;
-            background-color: $orange;
-            filter: blur(97px);
+    &:before {
+        position: absolute;
+        background-image: url("@img/footer-big-blik.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        left: -200px;
+        bottom: -350px;
+        @include adaptive-value("width", 686, 221, 1);
+        @include adaptive-value("height", 686, 221, 1);
+
+        @media (max-width: 768px) {
+            left: 0px;
+            bottom: -150px;
         }
     }
 
@@ -1531,10 +1540,12 @@
 
     span {
         color: $light-grey;
-        font-size: 300px;
-        @include adaptive-value("font-size", 500, 204, 1);
+        @include adaptive-value("font-size", 300, 204, 1);
         line-height: 1;
-        letter-spacing: -0.05em;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        margin-bottom: -250px;
+        @include adaptive-value("margin-bottom", -250, -100, 1);
         filter: blur(7px);
 
         @media (max-width: 992px) {
@@ -1553,14 +1564,13 @@
     }
 
     img {
-        position: absolute;
+        position: relative;
         z-index: 2;
         @include adaptive-value("width", 673, 347, 1);
         object-fit: cover;
-        left: 50%;
-        transform: translate(-50%, 0);
-
-        @include adaptive-value("bottom", -80, 0, 1);
+        bottom: -80px;
+        @include adaptive-value("bottom", -80, -2, 1);
+        min-height: 253px;
     }
 
     .section__body {

@@ -10,7 +10,7 @@ function tickerDirection() {
     if (tickers.length) {
         tickers.forEach(line => {
             let direction = 1;
-            const roll = scroll(line, { duration: 20 })
+            const roll = scroll(line, { duration: 40 })
             if (!isMobile.any()) {
 
                 ScrollTrigger.create({

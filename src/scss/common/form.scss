@@ -105,6 +105,8 @@
     // .form__button
 
     &__button {
+        position: relative;
+        z-index: 1;
         width: 100%;
 
         button {

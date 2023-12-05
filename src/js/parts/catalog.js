@@ -48,13 +48,14 @@ document.addEventListener('click', function (e) {
         }
     }
 
-    const backGround = document.querySelector('._background');
-
-    if (targetEl.closest('._person') && !targetEl.closest('._person._active')) {
-        e.preventDefault();
-        targetEl.classList.add('_active');
-    } else {
-        const personVideo = document.querySelector('._person');
-        personVideo.classList.remove('_active');
+    const personVideo = document.querySelector('._person');
+    if (personVideo) {
+        if (targetEl.closest('._person') && !targetEl.closest('._person._active')) {
+            e.preventDefault();
+            targetEl.classList.add('_active');
+        } else {
+            personVideo.classList.remove('_active');
+        }
     }
+
 })

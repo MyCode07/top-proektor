@@ -7,7 +7,7 @@ export const replaceDomElements = () => {
         const replaceElem = section.querySelector('[data-replace-element]');
 
         const width = +section.dataset.replaceWidth;
-        const newPosition = section.querySelector('[data-replace-new-position]');
+        const newPosition = section.querySelector('[data-replace-new-positiyon]');
         const oldPosition = section.querySelector('[data-replace-old-position]');
 
         const newPositionInsertType = newPosition.dataset.replaceNewPosition;

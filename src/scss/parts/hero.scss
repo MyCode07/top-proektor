@@ -19,6 +19,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @media (min-width: 1441px) {
+                object-position: bottom;
+            }
+
+            @media (max-width: 768px) {
+                object-position: 88%;
+            }
         }
 
         &:after {
@@ -201,6 +209,22 @@
     }
 
     &.home-hero {
+        position: relative;
+
+        @media (min-width: 769px) {
+            &:after {
+                position: absolute;
+                content: "";
+                right: -235px;
+                top: -45px;
+                background-image: url("@img/hero-blik.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 609px;
+                height: 609px;
+            }
+        }
+
         @media (min-width: 769px) {
             margin-bottom: -40px;
         }
@@ -208,7 +232,7 @@
         .hero__image {
             &:after {
                 @include adaptive-value("height", 137, 340, 1);
-                bottom: 0;
+                bottom: -2px;
                 top: unset;
 
                 @media (max-width: 768px) {
