@@ -1256,21 +1256,11 @@
 
         .section__flex-right {
             background-color: $orange;
-
-            @media (min-width: 993px) {
-                min-height: 100%;
-            }
-
-            @media (max-width: 992px) {
-                height: 340px;
-            }
-
-            @media (max-width: 425px) {
-                height: 181px;
-            }
+            display: flex;
+            align-items: flex-end;
 
             img {
-                height: 100%;
+                flex: 0 0 auto;
                 object-fit: contain;
             }
         }

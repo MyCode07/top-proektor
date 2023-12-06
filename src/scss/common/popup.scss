@@ -28,7 +28,70 @@
         pointer-events: all;
     }
 
-    .popup__content {
+    h2 {
+        color: #020101;
+
+        @media (min-width: 993px) {
+            @include adaptive-value("margin-bottom", 69, 24, 1);
+        }
+
+        @media (max-width: 992px) {
+            margin-bottom: 24px;
+            br {
+                display: none;
+            }
+        }
+    }
+
+    // .popup__container
+    &__container {
+        @media (max-width: 992px) {
+            padding: 0;
+        }
+    }
+
+    // .popup__body
+
+    &__body {
+        position: relative;
+        margin-top: 170px;
+        margin-bottom: 100px;
+        border-radius: 8px;
+        background: $light-grey;
+        padding: 59px 71px 95px 44px;
+
+        @media (max-width: 992px) {
+            margin-top: 0;
+            margin-bottom: 0;
+            border-radius: 0;
+            padding: 67px 15px 111px 15px;
+            min-height: 100vh;
+        }
+    }
+
+    // .popup__close
+
+    &__close {
+        position: absolute;
+        right: 13px;
+        top: 13px;
+
+        @media (max-width: 768px) {
+            right: 18px;
+            top: 18px;
+        }
+
+        svg {
+            pointer-events: none;
+            flex: 0 0 auto;
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    // .popup__content
+
+    &__content {
         p {
             margin-top: 24px;
             @include adaptive-value("margin-bottom", 94, 50, 1);
@@ -50,59 +113,9 @@
         }
     }
 
-    h2 {
-        color: #020101;
+    // .popup__flex
 
-        @media (min-width: 993px) {
-            @include adaptive-value("margin-bottom", 69, 24, 1);
-        }
-
-        @media (max-width: 992px) {
-            margin-bottom: 24px;
-            br {
-                display: none;
-            }
-        }
-    }
-
-    .popup__close {
-        position: absolute;
-        right: 13px;
-        top: 13px;
-
-        @media (max-width: 768px) {
-            right: 18px;
-            top: 18px;
-        }
-
-        svg {
-            pointer-events: none;
-            flex: 0 0 auto;
-            width: 22px;
-            height: 22px;
-        }
-    }
-
-    .popup__body {
-        position: relative;
-        margin-top: 170px;
-        margin-bottom: 100px;
-        border-radius: 8px;
-        background: $light-grey;
-        padding: 59px 71px 95px 44px;
-
-        @media (max-width: 992px) {
-            margin-top: 0;
-            margin-bottom: 0;
-            border-radius: 0;
-            width: 100vw;
-            margin-left: -15px;
-            padding: 67px 15px 111px 15px;
-            min-height: 100vh;
-        }
-    }
-
-    .popup__flex {
+    &__flex {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -111,20 +124,24 @@
             display: block;
             width: 100%;
         }
-    }
 
-    .popup__flex-left {
-        @media (max-width: 992px) {
-            width: 100%;
-            margin-bottom: 53px;
+        // .popup__flex-left
+
+        &-left {
+            @media (max-width: 992px) {
+                width: 100%;
+                margin-bottom: 53px;
+            }
         }
-    }
 
-    .popup__flex-right {
-        width: 47.96%;
+        // popup__flex-right
 
-        @media (max-width: 992px) {
-            width: 100%;
+        &-right {
+            width: 47.96%;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
         }
     }
 
@@ -218,10 +235,10 @@
                     margin-right: 11px;
                     margin-top: 3px;
 
-                    @media (max-width:768px){
+                    @media (max-width: 768px) {
                         margin-top: 1px;
                     }
-                    
+
                     &:after {
                         content: "";
                         width: 8px;
@@ -253,6 +270,14 @@
 
     .consulting {
         margin: 0;
+
+        .section__body {
+            @media (max-width: 992px) {
+                border-radius: 0;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
     }
 
     .section__body {

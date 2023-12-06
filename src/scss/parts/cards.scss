@@ -878,7 +878,7 @@
     justify-content: space-between;
     gap: 20px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 992px) {
         flex-direction: column-reverse;
         gap: 0;
     }
@@ -895,21 +895,22 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 50%;
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
 
         h3 {
             @include adaptive-value("font-size", 38, 24, 1);
             color: $white;
+            margin-bottom: 16px;
 
-            @media (min-width: 1300px) {
-                white-space: nowrap;
-            }
-
-            @media (max-width: 1200px) {
+            @media (max-width: 992px) {
                 margin-top: 16px;
-                margin-bottom: 16px;
 
                 br {
-                    display: none !important;
+                    display: none;
                 }
             }
         }
@@ -935,15 +936,15 @@
     &__img {
         display: block;
         position: relative;
+        width: 46%;
+        padding-bottom: 37%;
 
-        @media (min-width: 1201px) {
-            width: 299px;
-            height: 242px;
+        @media (max-width: 992px) {
+            width: 100%;
         }
 
-        @media (max-width: 1200px) {
-            width: 100%;
-            height: 168px;
+        @media (max-width: 768px) {
+            padding-bottom: 49%;
         }
 
         &:after {
