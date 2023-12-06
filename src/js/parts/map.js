@@ -1,5 +1,5 @@
 let myMap;
-const mapIconPath = 'img/icons/map-icon.svg';
+const mapIconPath = '/wp-content/themes/blank-sheet/assets/img/icons/map-icon.svg';
 const mapTabs = document.querySelectorAll('.map-tabs li');
 const zoom = 15.5;
 
