@@ -192,6 +192,8 @@
     }
 
     .section__flex-left {
+        width: 48%;
+
         @media (max-width: 992px) {
             width: 100%;
             margin-bottom: 53px;
@@ -463,7 +465,8 @@
                 }
             }
 
-            a {
+            a,
+            span {
                 font-weight: 500;
 
                 @media (max-width: 992px) {
@@ -1239,7 +1242,7 @@
             }
         }
 
-        button {
+        ._btn {
             width: 140px;
             color: $white;
 
@@ -1261,8 +1264,8 @@
             @media (min-width: 993px) {
                 max-width: 500px;
                 width: 100%;
-                padding-top: 20px; 
-            } 
+                padding-top: 20px;
+            }
 
             @media (max-width: 992px) {
                 width: 100%;

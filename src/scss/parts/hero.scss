@@ -40,8 +40,8 @@
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
             flex: 0 0 auto;
+            object-fit: cover;
 
             @media (min-width: 1441px) {
                 object-position: bottom;
@@ -153,6 +153,10 @@
             width: 12px;
             height: 12px;
 
+            @media (max-width: 768px) {
+                right: 0;
+            }
+
             svg {
                 flex: 0 0 auto;
                 stroke: $white;
@@ -171,6 +175,7 @@
             top: 0;
             width: 100%;
             height: 100%;
+            object-fit: contain;
 
             &:before {
                 position: fixed;
@@ -197,6 +202,10 @@
                 object-fit: cover;
                 transition: all 0.3s ease 0s;
                 z-index: 2;
+
+                @media (max-width: 768px) {
+                    left: 15px;
+                }
             }
         }
 
@@ -224,10 +233,13 @@
 
             ._person-video {
                 pointer-events: all;
+
                 video,
                 iframe {
                     clip-path: circle(100%);
+                    object-fit: contain;
                 }
+
                 &:before {
                     opacity: 1;
                 }
