@@ -1,8 +1,4 @@
 .form {
-    & > :first-child {
-        @include adaptive-value("margin-bottom", 35, 24, 1);
-    }
-
     // .form__row
 
     &__row {
@@ -10,6 +6,10 @@
         align-items: center;
         gap: 25px;
         width: 100%;
+
+        &:not(:first-of-type) {
+            @include adaptive-value("margin-top", 35, 24, 1);
+        }
 
         @media (max-width: 992px) {
             flex-direction: column;
@@ -96,22 +96,39 @@
                 font-size: 16px;
             }
         }
+
+        &._error {
+            border-color: red;
+
+            span,
+            input,
+            textarea {
+                color: red;
+
+                &::placeholder {
+                    color: red;
+                }
+            }
+        }
     }
 
     ._textarea {
-        @include adaptive-value("margin-bottom", 51, 33, 1);
     }
 
     // .form__button
 
     &__button {
+        @include adaptive-value("margin-top", 51, 33, 1);
+
         position: relative;
         z-index: 1;
         width: 100%;
 
-        button {
+        button,
+        input {
             width: 100%;
             margin-bottom: 19px;
+            cursor: pointer;
         }
 
         p {
@@ -132,5 +149,33 @@
 
     &__img {
         max-width: 841px;
+    }
+}
+
+.wpcf7-response-output {
+    display: none !important;
+}
+
+.wpcf7-spinner {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    bottom: 0;
+}
+
+form.submitting {
+    pointer-events: none;
+    position: relative;
+
+    &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $black, $alpha: 0.5);
+        border-radius: 8px;
     }
 }

@@ -20,7 +20,7 @@ import "./static/ticker.js";
 stickyHeader()
 replaceDomElements();
 accordeon();
-maskInputs('+7 999 999 999 999', '._phone-mask')
+maskInputs('+7 999 999 99 99', '._phone-mask')
 createMap();
 
 document.addEventListener('click', function (e) {
