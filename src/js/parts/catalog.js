@@ -15,37 +15,37 @@ document.addEventListener('click', function (e) {
     }
 
 
-    if (targetEl.closest('.tags') && targetEl.hasAttribute('data-tag')) {
+    if (targetEl.closest('.sidebar-categories') && targetEl.hasAttribute('data-cat') && !targetEl.classList.contains('_active')) {
         e.preventDefault();
-
-        const allTags = document.querySelectorAll('[data-tag]');
-        allTags.forEach(tag => tag.classList.remove('_active'))
-        targetEl.classList.add('_active');
+        toggleElem(targetEl, document.querySelectorAll('[data-cat]'))
     }
 
-    if (targetEl.classList.contains('slide-tabs__tab')) {
+    if (targetEl.closest('.tags') && targetEl.hasAttribute('data-tag') && !targetEl.classList.contains('_active')) {
+        e.preventDefault();
+        toggleElem(targetEl, document.querySelectorAll('[data-tag]'))
+    }
+
+    if (targetEl.classList.contains('slide-tabs__tab') && !targetEl.classList.contains('_active')) {
         e.preventDefault();
 
-        if (!targetEl.classList.contains('_active')) {
-            const tabId = targetEl.dataset.tab;
-            const slideSection = targetEl.closest('section.slide');
-            const allTabs = slideSection.querySelectorAll('.slide-tabs__tab');
-            const allTabsContnet = slideSection.querySelectorAll('.slide-item');
+        const tabId = targetEl.dataset.tab;
+        const slideSection = targetEl.closest('section.slide');
+        const allTabs = slideSection.querySelectorAll('.slide-tabs__tab');
+        const allTabsContnet = slideSection.querySelectorAll('.slide-item');
 
-            allTabsContnet.forEach(contnet => {
-                if (contnet.dataset.tabContent == tabId)
-                    contnet.classList.add('_active')
-                else
-                    contnet.classList.remove('_active')
-            })
+        allTabsContnet.forEach(contnet => {
+            if (contnet.dataset.tabContent == tabId)
+                contnet.classList.add('_active')
+            else
+                contnet.classList.remove('_active')
+        })
 
-            allTabs.forEach(tab => {
-                if (tab.dataset.tab == tabId)
-                    tab.classList.add('_active')
-                else
-                    tab.classList.remove('_active')
-            })
-        }
+        allTabs.forEach(tab => {
+            if (tab.dataset.tab == tabId)
+                tab.classList.add('_active')
+            else
+                tab.classList.remove('_active')
+        })
     }
 
     const personVideo = document.querySelector('._person');
@@ -57,5 +57,11 @@ document.addEventListener('click', function (e) {
             personVideo.classList.remove('_active');
         }
     }
-
 })
+
+function toggleElem(elem, selector) {
+    selector.forEach(item => {
+        item.classList.remove('_active')
+    })
+    elem.classList.add('_active');
+}

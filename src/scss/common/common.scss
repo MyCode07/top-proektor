@@ -176,6 +176,14 @@ h5 {
             }
         }
     }
+
+    * {
+        pointer-events: none;
+    }
+
+    &._hide {
+        display: none;
+    }
 }
 
 ._btn-social {
@@ -279,8 +287,6 @@ h5 {
         transform: rotate(180deg);
     }
 }
-.next {
-}
 
 .prev,
 .next {
@@ -319,5 +325,47 @@ h5 {
         &.swiper-pagination-bullet-active {
             background-color: $orange;
         }
+    }
+}
+
+._nothing {
+    color: $white;
+}
+
+.loading {
+    text-align: center;
+    width: 100%;
+    @include adaptive-value("font-size", 16, 14, 1);
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin-top: 1em;
+    color: $white;
+
+    span {
+        display: block;
+        border: 2px solid $orange;
+        border-radius: 50%;
+        border-top: 2px solid currentColor;
+        width: 1em;
+        height: 1em;
+        margin-left: 0.5em;
+
+        animation: spinner 2s linear infinite;
+
+        @keyframes spinner {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &._hide {
+        display: none;
     }
 }

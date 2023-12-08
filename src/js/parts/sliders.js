@@ -80,7 +80,8 @@ if (sliders.length) {
             new Swiper('.product__slider .swiper', {
                 modules: [Thumbs, Pagination],
                 spaceBetween: 10,
-                centeredSlides: true,
+                slidesPerView: 'auto',
+                grabCursor: true,
                 thumbs: {
                     swiper: productSlider,
                 },

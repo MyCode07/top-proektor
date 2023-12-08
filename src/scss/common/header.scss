@@ -115,7 +115,8 @@
                     height: 40px;
                 }
 
-                svg,img {
+                svg,
+                img {
                     position: relative;
                     flex: 0 0 auto;
                     width: 14px;
@@ -425,4 +426,10 @@
             display: none;
         }
     }
+}
+
+body:has(.menu._open) header {
+    background-color: #212023;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
