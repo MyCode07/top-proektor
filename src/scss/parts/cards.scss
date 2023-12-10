@@ -344,7 +344,7 @@
     @media (max-width: 768px) {
         flex-direction: row;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     @media (max-width: 992px) {
@@ -357,6 +357,10 @@
     // .projector-card__img
 
     &__img {
+        @media (max-width: 768px) {
+            width: 45%;
+        }
+
         a {
             display: block;
             background-color: $white;
@@ -407,6 +411,10 @@
             text-align: center;
             @include adaptive-value("padding-top", 53, 0, 1);
             border-top: 1px solid rgba($color: $black, $alpha: 0.1);
+        }
+
+        @media (max-width: 768px) {
+            width: 52%;
         }
     }
 
@@ -718,7 +726,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 25px; 
+    padding: 25px;
 
     @media (max-width: 1024px) {
         padding: 0;
@@ -833,6 +841,12 @@
                 @media (max-width: 768px) {
                     width: 100%;
                 }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             ._hover {

@@ -14,32 +14,32 @@
                     <h2>Оставить заявку</h2>
                     <div class="basket-card" data-replace-old-position="afterend">
                         <div class="basket-card__img">
-                            <img src="@img/projectors/prod-big.png" alt="">
+                            <img src="@img/1x1.png" alt="">
                         </div>
                         <div class="basket-card__info">
-                            <p class="basket-card__name">Рекламный гобо проектор Gobopro TPR-1503 уличный</p>
-                            <span class="basket-card__price">42 000 ₽</span>
+                            <p class="basket-card__name"></p>
+                            <span class="basket-card__price"><span>0</span> ₽</span>
                         </div>
                     </div>
                     <ol data-replace-element>
                         <li>
                             <label for="card">
                                 <p>Оплата картой (Visa, Mastercard) через Tinkoff</p>
-                                <input type="radio" id="card" name="payment">
+                                <input type="radio" id="card" value="Оплата картой (Visa, Mastercard) через Tinkoff" name="payment">
                                 <span></span>
                             </label>
                         </li>
                         <li>
                             <label for="nocash">
                                 <p>Безналичная оплата</p>
-                                <input type="radio" id="nocash" name="payment" checked>
+                                <input type="radio" id="nocash" value="Безналичная оплата"  name="payment" checked>
                                 <span></span>
                             </label>
                         </li>
                         <li>
                             <label for="cash">
                                 <p>Наличными при получени</p>
-                                <input type="radio" id="cash" name="payment">
+                                <input type="radio" id="cash" value="Наличными при получени" name="payment">
                                 <span></span>
                             </label>
                         </li>
@@ -65,9 +65,12 @@
                         </div>
                         <div class="form__button" data-replace-new-position="beforebegin">
                             <button class="_btn _btn-orange">Обратный звонок</button>
-                            <p> Нажимая на кнопку, вы соглашаетесь <a href="" class="_hover">с политикой
+                            <p>Нажимая на кнопку, вы соглашаетесь <a href="" class="_hover">с политикой
                                     конфиденциальности</a> .</p>
                         </div>
+                        <input type="hidden" name="product_name">
+                        <input type="hidden" name="product_price">
+                        <input type="hidden" name="billing">
                     </form>
                 </div>
             </div>
