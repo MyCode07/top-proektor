@@ -12,12 +12,54 @@
                     <p>В этой форме Вы можете загрузить уже готовый макет (в форматах PDF, CDR, EPS, Ai) или
                         материал для макета, отвечая на
                         вопросы. Это очень просто и не займет у Вас более 60 секунд.</p>
-                    <div>
-                        <button class="_btn _btn-white">Загрузить макет </button>
-                        <button class="_btn _btn-transparent">У меня нет макета</button>
+                    <div class="orange-file">
+
+                        <div class="file-uploaded">
+                            <span></span>
+                            <button class="file-uploaded__remove">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29"
+                                    fill="none">
+                                    <rect x="7.77344" y="6.8313" width="20.0139" height="1.33426"
+                                        transform="rotate(45 7.77344 6.8313)" fill="white" />
+                                    <rect x="21.9258" y="7.77466" width="20.0139" height="1.33426"
+                                        transform="rotate(135 21.9258 7.77466)" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <form class="form" action="#">
+                            <div class="_btn _btn-transparent file-upload">
+                                Загрузить макет
+                                <input id="file" name="file" type="file"
+                                    accept="application/cdr, application/eps, application/ai, application/pdf">
+                            </div>
+                            <div class="form-file__hidden">
+                                <div class="form__row">
+                                    <div class="form__item">
+                                        <span>Ваше имя</span>
+                                        <input type="text" value="" placeholder="">
+                                    </div>
+                                    <div class="form__item">
+                                        <span>Ваш телефон</span>
+                                        <input type="text" class="_phone-mask" value="" placeholder="" inputmode="text">
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__item _textarea">
+                                        <span>Текст сообщения</span>
+                                        <textarea placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__button">
+                                    <button class="_btn _btn-white" data-open-popup="" data-id="request">Обратный
+                                        звонок</button>
+                                    <p>Нажимая на кнопку, вы соглашаетесь <a href="">с политикой
+                                            конфиденциальности.</a></p>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

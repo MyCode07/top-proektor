@@ -1176,7 +1176,7 @@
             width: 39.27%;
         }
 
-        p {
+        & > p {
             display: block;
             @include adaptive-value("margin-bottom", 48, 37, 1);
 
@@ -1191,8 +1191,14 @@
                 line-height: 1.2;
             }
         }
+    }
 
-        div {
+    // .orange-file
+
+    &-file {
+        // .orange-file__btns
+
+        &__btns {
             display: flex;
             align-items: center;
             gap: 11px;
@@ -1201,10 +1207,26 @@
                 flex-direction: column;
             }
 
-            button {
+            ._btn {
                 width: 100%;
             }
         }
+    }
+
+    .form__item {
+        &:not(._error) { 
+            border-color: rgba($color: $white, $alpha: 0.3);
+
+            span,
+            input, 
+            textarea { 
+                color: $white;
+            }
+        }
+    }
+
+    .form__button p {
+        color: $white;
     }
 }
 
