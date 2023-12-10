@@ -7,7 +7,7 @@
 <main>
     <section class="hero home-hero">
         <div class="hero__image hero-video">
-            <video preload="none" autoplay poster="img/hero-bgi.png" muted loop>
+            <video preload="none" autoplay playsinline poster="img/hero-bgi.png" muted loop>
                 <source src="files/projector.webm" type="video/webm">
             </video>
         </div>
@@ -50,9 +50,11 @@
                         </defs>
                     </svg>
                     <div class="_person-video">
-                        <video preload="none" autoplay poster="img/hero-bgi.png" muted loop controls>
-                            <source src="files/projector.webm" type="video/webm">
-                        </video>
+                        <div class="video">
+                            <video preload="none" autoplay playsinline poster="img/hero-bgi.png" muted loop controls>
+                                <source src="files/projector.webm" type="video/webm">
+                            </video>
+                        </div>
                     </div>
                 </button>
             </div>
