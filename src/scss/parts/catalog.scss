@@ -212,6 +212,12 @@
             gap: 8px;
         }
 
+        [data-accordion-item] {
+            &:not(:has([data-accordion-item-body])) .sidebar-categories__cat div {
+                display: none;
+            }
+        }
+
         // .sidebar-categories__cat
 
         &__cat {
@@ -270,6 +276,20 @@
                 @media (max-width: 1024px) {
                     max-width: none;
                 }
+            }
+        }
+
+        .no-child-cat {
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            transition: all 0.3s ease 0s;
+            max-width: 174px;
+            width: 100%;
+
+            &._active {
+                color: rgba($color: $white, $alpha: 0.5);
             }
         }
     }
