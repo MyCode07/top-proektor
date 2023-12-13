@@ -357,34 +357,33 @@
     // .projector-card__img
 
     &__img {
+        width: 100%;
+
         @media (max-width: 768px) {
             width: 45%;
         }
 
         a {
-            display: block;
             background-color: $white;
+            display: block;
+            width: 100%;
+            position: relative;
+            padding-bottom: 65%;
 
             @media (min-width: 769px) {
                 @include adaptive-value("margin-bottom", 31, 0, 1);
             }
 
-            @media (min-width: 426px) {
-                @include adaptive-value("height", 268, 152, 1);
-            }
-
-            @media (max-width: 425px) {
-                width: 141px;
-                height: 152px;
-            }
-
             @media (max-width: 768px) {
-                margin-right: 10px;
+                padding-bottom: 100%;
             }
 
             img {
                 height: 100%;
                 object-fit: contain;
+                position: absolute;
+                left: 0;
+                top: 0;
             }
         }
 
@@ -524,15 +523,11 @@
 }
 
 .product-card {
-    @media (max-width: 768px) {
-        border-radius: 4px;
-    }
-
-    border: 1px solid $black;
     * {
         text-align: left;
     }
 
+    border: 1px solid $black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -547,10 +542,8 @@
     @media (max-width: 768px) {
         flex-direction: row;
         align-items: flex-start;
-        justify-content: center;
-    }
-
-    @media (max-width: 768px) {
+        justify-content: space-between;
+        border-radius: 4px;
         padding-top: 35px;
         padding-bottom: 34px;
         padding-left: 13px;
@@ -565,6 +558,7 @@
         @media (max-width: 768px) {
             display: flex;
             flex-direction: column-reverse;
+            width: 45%;
         }
 
         a {
@@ -572,25 +566,22 @@
             background-color: $white;
             margin-bottom: 28px;
             width: 100%;
+            padding-bottom: 120%;
+            position: relative;
+
+            @media (max-width: 768px) {
+                margin-bottom: 0;
+                padding-bottom: 100%;
+            }
 
             img {
                 display: flex;
                 object-fit: contain;
-
-                @media (min-width: 769px) {
-                    height: 256px;
-                }
-
-                @media (max-width: 768px) {
-                    width: 141px;
-                    height: 152px;
-                }
-            }
-
-            @media (max-width: 768px) {
-                margin-right: 10px;
-                margin-bottom: 0;
-                width: fit-content;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
             }
         }
     }
@@ -606,6 +597,10 @@
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            width: 52%;
         }
     }
 

@@ -7,11 +7,14 @@ document.addEventListener('click', function (e) {
 
         if (tags.classList.contains('_active')) targetEl.querySelector('span').textContent = 'Скрыть';
         else targetEl.querySelector('span').textContent = 'Показать все';
+
+        targetEl.classList.toggle('_active');
     }
 
     if (targetEl.classList.contains('sort') && targetEl.closest('.sidebar')) {
         const cats = document.querySelector('.sidebar-categories');
         cats.classList.toggle('_active');
+        targetEl.classList.toggle('_active');
     }
 
     if (targetEl.closest('.sidebar-categories') && targetEl.hasAttribute('data-cat') && !targetEl.classList.contains('_active')) {

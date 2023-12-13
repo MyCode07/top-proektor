@@ -406,10 +406,10 @@
     position: absolute;
     right: 8px;
     top: 8px;
-
     display: flex;
     align-items: center;
     gap: 4px;
+    z-index: 1;
 
     span {
         border-radius: 4px;
@@ -450,12 +450,21 @@
     color: #fff;
     font-size: 12px;
 
-    svg {
+    svg,
+    img {
         fill: $white;
+        transition: all 0.3s ease 0s;
     }
 
     svg,
     span {
         pointer-events: none;
+    }
+
+    &._active {
+        svg,
+        img {
+            transform: rotate(180deg);
+        }
     }
 }

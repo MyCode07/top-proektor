@@ -128,15 +128,24 @@
         font-weight: 500;
         letter-spacing: -0.03em;
 
-        svg {
+        svg,
+        img {
             fill: $white;
             width: 7px;
             height: 14px;
+            transition: all 0.3s ease 0s;
         }
 
         svg,
         span {
             pointer-events: none;
+        }
+
+        &._active {
+            svg,
+            img {
+                transform: rotate(180deg);
+            }
         }
     }
 
