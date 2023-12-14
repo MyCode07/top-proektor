@@ -89,8 +89,7 @@
                     & > li {
                         display: flex;
                         align-items: center;
-                        flex-direction: row-reverse;
-                        justify-content: flex-end;
+                        justify-content: space-between;
                         flex-wrap: wrap;
 
                         font-size: 18px;
@@ -101,49 +100,31 @@
                                 max-height: 100vh;
                             }
 
-                            & > button:after {
-                                transform: translate(-50%, -50%) rotate(0deg);
+                            & > button svg {
+                                transform: rotate(180deg);
                             }
                         }
 
                         button {
                             width: 21px;
                             height: 21px;
-                            margin-left: 0 !important;
-                            margin-right: 12px;
-                            background-color: $orange;
-                            position: relative;
-                            border-radius: 50%;
-
-                            &:before,
-                            &:after {
-                                position: absolute;
-                                content: "";
-                                left: 50%;
-                                top: 50%;
-                                width: 9px;
-                                height: 1px;
-                                background-color: $white;
-                                transition: all 0.3s ease 0s;
-                            }
-
-                            &:after {
-                                transform: translate(-50%, -50%) rotate(90deg);
-                            }
-
-                            &:before {
-                                transform: translate(-50%, -50%);
-                            }
+                            flex: 0 0 auto;
+                            margin-left: 12px;
 
                             svg {
-                                display: none;
+                                width: 6px;
+                                height: 3px;
+                                flex: 0 0 auto;
+                                fill: $white;
+                                transition: all 0.3s ease 0s;
+                                margin-left: auto;
                             }
                         }
 
                         ul {
                             width: 100%;
                             flex: 0 0 auto;
-                            padding-left: 34px;
+                            padding-left: 12px;
 
                             max-height: 0;
                             overflow: hidden;

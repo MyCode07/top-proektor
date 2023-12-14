@@ -149,6 +149,8 @@
         }
     }
 
+    [data-accordion-item-content] a,
+    [data-accordion-item-content] button,
     [data-cat] {
         color: $light-text;
         font-size: 14px;
@@ -162,9 +164,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                span {
-                    color: $white;
-                }
+                color: $white;
             }
         }
     }
@@ -201,6 +201,10 @@
             div:before {
                 transform: translate(-50%, -50%) rotate(0deg);
             }
+
+            .sidebar-categories__cat a {
+                color: $white;
+            }
         }
 
         [data-accordion] {
@@ -214,7 +218,7 @@
         }
 
         [data-accordion-item-content] {
-            padding-left: 34px;
+            padding-left: 12px;
             margin-top: 8px;
             display: flex;
             flex-direction: column;
@@ -240,6 +244,10 @@
                         background-color: #ff711a;
                     }
                 }
+            }
+
+            a {
+                pointer-events: all !important;
             }
 
             div {
@@ -273,9 +281,10 @@
                 }
             }
 
-            span {
-                color: #fff;
-                font-size: 16px;
+            span,
+            a {
+                color: $white;
+                font-size: 16px !important;
                 font-weight: 500;
                 letter-spacing: -0.03em;
                 transition: all 0.3s ease 0s;
@@ -300,6 +309,34 @@
             &._active {
                 color: rgba($color: $white, $alpha: 0.5);
             }
+        }
+    }
+
+    .all-categories {
+        color: $light-text;
+
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        transition: all 0.3s ease 0s;
+        max-width: 174px;
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+            }
+        }
+
+        &._active {
+            color: $white;
+        }
+
+        @media (max-width: 1024px) {
+            max-width: none;
+            margin-bottom: 12px;
         }
     }
 }

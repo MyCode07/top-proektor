@@ -301,10 +301,6 @@
                         }
                     }
 
-                    a {
-                        white-space: nowrap;
-                    }
-
                     button {
                         flex: 0 0 auto;
                         margin-left: 8px;
@@ -322,9 +318,9 @@
                         position: absolute;
                         top: 100%;
                         left: 0;
-                        background-color: #020202;
-                        padding: 35px 0 27px 0;
-                        width: 317px;
+                        background-color: $black;
+                        padding: 23px 0 27px 0;
+                        width: 254px;
                         opacity: 0;
                         pointer-events: none;
                         visibility: hidden;
@@ -334,8 +330,9 @@
                         li {
                             transition: color 0.3s ease 0s;
                             display: flex;
+                            justify-content: space-between;
                             align-items: center;
-                            padding: 0 29px;
+                            padding: 0 22px;
 
                             &:not(.menu-title) {
                                 color: $light-text;
@@ -376,14 +373,22 @@
                                 fill: currentColor;
                             }
 
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 40px;
+                                width: 20px;
+                                left: calc(100% - 10px);
+                            }
+
                             ul {
                                 position: absolute;
                                 top: 0;
-                                left: 100%;
+                                left: calc(100% + 5px);
                                 min-height: 100%;
-                                background-color: #0d0d0d;
-                                padding: 35px 0 27px 0;
-                                width: 317px;
+                                background-color: $black;
+                                padding: 23px 0 27px 0;
+                                width: 254px;
 
                                 transform: translate3d(-50px, 0, 0);
                                 opacity: 0;

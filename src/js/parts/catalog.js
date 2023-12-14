@@ -17,10 +17,10 @@ document.addEventListener('click', function (e) {
         targetEl.classList.toggle('_active');
     }
 
-    if (targetEl.closest('.sidebar-categories') && targetEl.hasAttribute('data-cat') && !targetEl.classList.contains('_active')) {
-        e.preventDefault();
-        toggleElem(targetEl, document.querySelectorAll('[data-cat]'))
-    }
+    // if (targetEl.closest('.sidebar-categories') && targetEl.hasAttribute('data-cat') && !targetEl.classList.contains('_active')) {
+    //     e.preventDefault();
+    //     toggleElem(targetEl, document.querySelectorAll('[data-cat]'))
+    // }
 
     if (targetEl.closest('.tags') && targetEl.hasAttribute('data-tag') && !targetEl.classList.contains('_active')) {
         e.preventDefault();
@@ -50,15 +50,7 @@ document.addEventListener('click', function (e) {
         })
     }
 
-    const personVideo = document.querySelector('._person');
-    if (personVideo) {
-        if (targetEl.closest('._person') && !targetEl.closest('._person._active')) {
-            e.preventDefault();
-            targetEl.classList.add('_active');
-        } else {
-            personVideo.classList.remove('_active');
-        }
-    }
+   
 
     if (targetEl.hasAttribute('data-open-popup') && targetEl.hasAttribute('data-id') && targetEl.dataset.id == 'request') {
         getProducTInfo(targetEl.closest('[data-product]'))

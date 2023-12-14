@@ -8,14 +8,9 @@ import "./parts/catalog.js";
 import "./parts/sliders.js";
 import "./parts/popup.js";
 import "./parts/menu.js";
+import "./parts/video.js";
 import "./static/ticker.js";
 
-// import "./parts/read-more.js";
-// import "./parts/filters.js";
-// import { scrollDown } from "./parts/scroll-down.js";
-// import { animateAction } from "./parts/animations.js";
-// scrollDown();
-// animateAction()
 
 stickyHeader()
 replaceDomElements();
