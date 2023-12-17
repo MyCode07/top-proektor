@@ -105,6 +105,10 @@
                             }
                         }
 
+                        a {
+                            max-width: calc(100% - 40px);
+                        }
+
                         button {
                             width: 21px;
                             height: 21px;

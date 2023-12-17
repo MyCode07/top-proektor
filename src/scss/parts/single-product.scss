@@ -363,6 +363,8 @@
     &-content {
         @media (min-width: 993px) {
             width: 47%;
+            flex: 0 0 auto;
+            padding-left: 40px;
         }
 
         & > :not(:last-child) {
