@@ -10,7 +10,7 @@ import "./parts/popup.js";
 import "./parts/menu.js";
 import "./parts/video.js";
 import "./static/ticker.js";
-
+import { Fancybox } from "@fancyapps/ui";
 
 stickyHeader()
 replaceDomElements();
@@ -25,6 +25,10 @@ document.addEventListener('click', function (e) {
         document.querySelector('.pages').classList.toggle('_hide');
     }
 })
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});
 
 
 const inputItems = [...document.querySelectorAll('input ')].concat([...document.querySelectorAll('textarea ')])
