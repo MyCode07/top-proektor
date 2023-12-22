@@ -919,6 +919,7 @@
     .grid {
         @media (min-width: 1025px) {
             gap: 0;
+            grid-template-columns: repeat(5, 1fr);
         }
 
         &-item {
@@ -926,7 +927,7 @@
                 border-right: 1px solid rgba($color: $black, $alpha: 0.1);
             }
 
-            &:nth-child(4n) {
+            &:nth-child(5n) {
                 border-right: 0;
             }
         }
@@ -1214,12 +1215,12 @@
     }
 
     .form__item {
-        &:not(._error) { 
+        &:not(._error) {
             border-color: rgba($color: $white, $alpha: 0.3);
 
             span,
-            input, 
-            textarea { 
+            input,
+            textarea {
                 color: $white;
             }
         }

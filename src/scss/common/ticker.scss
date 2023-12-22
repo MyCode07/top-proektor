@@ -14,7 +14,9 @@
 
     &._rotate {
         transform: translate(-50%, 0) rotate(180deg);
-        a {
+
+        ._ticker-text a,
+        ._ticker-text div {
             transform: rotate(180deg);
         }
     }
@@ -38,7 +40,8 @@
             gap: 15px;
         }
 
-        a {
+        a,
+        div {
             display: flex;
             justify-content: center;
             align-items: center;
