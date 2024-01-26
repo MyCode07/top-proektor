@@ -1075,6 +1075,22 @@
         @include adaptive-value("font-size", 74, 40, 1);
         font-weight: 500;
         line-height: 1;
+
+        .icon {
+            @include adaptive-value("width", 94, 62, 1);
+        }
+
+        &:has(.icon) {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            + p {
+                @media (min-width: 769px) {
+                    max-width: 445px;
+                }
+            }
+        }
     }
 
     p {

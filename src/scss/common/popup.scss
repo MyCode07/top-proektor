@@ -304,4 +304,16 @@
             }
         }
     }
+
+    &#present {
+        .consulting .section__flex {
+            align-items: flex-start;
+
+            &-left {
+                @media (min-width: 993px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
 }

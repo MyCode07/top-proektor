@@ -1754,3 +1754,97 @@
         }
     }
 }
+
+.sales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+
+    @media (max-width: 768px) {
+        display: block;
+
+        & > :not(:last-child) {
+            margin-bottom: 13px;
+        }
+    }
+
+    // .sales-card
+
+    &-card {
+        & > div {
+            min-height: 100%;
+
+            @include adaptive-value("padding-top", 32, 15, 1);
+            @include adaptive-value("padding-bottom", 40, 32, 1);
+            @include adaptive-value("padding-inline", 52, 25, 1);
+
+            label {
+                letter-spacing: -0.03em;
+            }
+
+            p {
+                letter-spacing: -0.03em;
+                font-weight: 500;
+            }
+        }
+    }
+
+    & > :first-child > div {
+        background-color: $orange;
+
+        label {
+            @include adaptive-value("margin-bottom", 28, 20, 1);
+        }
+    }
+
+    & > :last-child > div {
+        background-color: #f4f1e8;
+
+        background-position: right;
+        background-repeat: no-repeat;
+
+        @media (max-width: 600px) {
+            background-image: unset !important;
+        }
+
+        label {
+            @include adaptive-value("font-size", 35, 26, 1);
+            margin-bottom: 30px;
+            display: block;
+            font-weight: 500;
+            max-width: 347px;
+
+            @media (max-width: 768px) {
+                max-width: none;
+                margin-bottom: 18px;
+            }
+        }
+
+        p {
+            @include adaptive-value("font-size", 20, 14, 1);
+            color: #898989;
+
+            margin-bottom: 36px;
+            max-width: 347px;
+
+            @media (max-width: 768px) {
+                max-width: none;
+                margin-bottom: 31px;
+                padding-right: 15px;
+            }
+
+            a {
+                color: $orange;
+            }
+        }
+
+        ._btn {
+            max-width: 260px;
+            width: 100%;
+
+            @media (max-width: 768px) {
+                max-width: 203px;
+            }
+        }
+    }
+}

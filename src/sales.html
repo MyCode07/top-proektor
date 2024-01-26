@@ -1,0 +1,46 @@
+@@include('./html/head.html', {
+"title":"Скидки и сертификаты",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="section page-top text-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="back"></div>
+                <h1>Скидки и сертификаты</h1>
+
+                <div class="sales">
+                    <div class="sales-card">
+                        <div class="about-card">
+                            <label>
+                                <div class="icon">
+                                    <img src="img/sales-icon.svg" alt="">
+                                </div>
+                                Скидка 10%
+                            </label>
+                            <p>Предоставляем скидки — ветеранам ВОВ, СВО, пенсионерам, инвалидам — 10% *</p>
+                            <span>* При предъявлении удостоверения.</span>
+                        </div>
+                    </div>
+                    <div class="sales-card">
+                        <div style="background-image: url('img/sales-present.png');">
+                            <label>Подарочный сертификат</label>
+                            <p>Не знаете, что подарить владельцу бизнеса / руководителю компании ? Вы можете приобрести
+                                сертификат на любую сумму в
+                                <a href="">top-proektor.ru</a></p>
+                            <button class="_btn _btn-orange" data-open-popup data-id="present">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')
