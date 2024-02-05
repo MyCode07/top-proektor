@@ -5,8 +5,40 @@ const body = document.body;
 const menu = document.querySelector('.menu');
 const burger = document.querySelector('.header__burger');
 const menuLinks = document.querySelectorAll('.menu li a');
-const header = document.querySelector('.header');
+const headerMenu = document.querySelector('.header nav');
 
+function replaceMenu() {
+    if (!headerMenu) return
+
+    let lockPosition = true;
+    const replaceElem = headerMenu;
+
+    const width = 1024;
+    const newPosition = menu.querySelector('.menu__body');
+    const oldPosition = document.querySelector('.header__right');
+
+    const newPositionInsertType = 'afterbegin';
+    const oldPositionInsertType = 'afterbegin';
+
+
+    function replace() {
+        if (window.innerWidth <= width) {
+            if (lockPosition == true)
+                newPosition.insertAdjacentElement(newPositionInsertType, replaceElem)
+            lockPosition = false
+        }
+        else {
+            if (lockPosition == false)
+                oldPosition.insertAdjacentElement(oldPositionInsertType, replaceElem)
+            lockPosition = true
+        }
+
+    }
+
+    replace()
+    window.addEventListener('resize', replace)
+}
+replaceMenu();
 
 if (burger) {
     burger.addEventListener('click', (е) => {
